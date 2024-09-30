@@ -26,27 +26,35 @@
     display: none; /* Hidden by default, visible on mobile */
   }
   
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .nav__list {
-      display: none; /* Hide the menu on mobile until toggled */
-      flex-direction: row;
-      position: absolute; /* Overlay navigation on mobile */
-      top: 60px; /* Adjust to fit below the nav bar */
-      background: var(--clr-navbar-bg); /* Consistent background */
-      width: 80%; /* Adjust width for mobile */
-      z-index: 100; /* Ensure it overlays content */
-    }
-  
-    .nav__list--show {
-      display: flex; /* Show list when toggled */
-      position: relative; /* Reset positioning when visible */
-      top: 0;
-      background: none;
-      width: 100%; /* Full width of container */
-    }
-  
-    .nav__hamburger {
-      display: block; /* Show hamburger icon on smaller screens */
-    }
+ /* Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
+
+  .nav__list {
+    display: none; /* Hide the menu on mobile until toggled */
+    flex-direction: row; /* Stack items horizontally */
+    position: absolute; /* Fix it to the top of the viewport */
+    top: 60px; /* Adjust to fit below the nav bar */
+    left: 0; /* Align to the left */
+    right: 0; /* Ensure it stretches across the screen */
+    background: var(--clr-navbar-bg); /* Consistent background */
+    width: 100vw; /* Use full viewport width */
+    z-index: 100; /* Ensure it overlays content */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    transition: all 0.3s ease; /* Smooth transition for opening/closing */
+  }
+
+  .nav__list--show {
+    display: flex; /* Show list when toggled */
+    top: 0; /* Reset top position when visible */
+  }
+
+  .nav__hamburger {
+    display: block; /* Show hamburger icon on smaller screens */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+}
+
+
