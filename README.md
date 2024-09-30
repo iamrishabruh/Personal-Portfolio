@@ -36,19 +36,24 @@ This website is built using the following technologies
 To get a local copy up and running, follow these steps:
 
 1. **Clone the repository:**
+
 ```git clone https://github.com/username/portfolio.git```
 
 2. Navigate to the project directory:
+
 ```cd portfolio```
 
 3. Install the dependencies:
+
 ```npm install```
 
 4. Start the development server:
+
 ```npm start```
 
 ## Usage
 After starting the development server, you can view the website in your browser at http://localhost:3000. 
+
 _npm start should automatically trigger a browser open_
 
 ## Contributing
