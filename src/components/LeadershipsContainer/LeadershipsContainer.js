@@ -2,16 +2,16 @@ import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
 import InstagramIcon from '@material-ui/icons/Instagram'
-import './LeadershipContainer.css'
+import './LeadershipsContainer.css'
 
-const LeadershipContainer = ({ leaderships }) => (
+const LeadershipsContainer = ({ leadership }) => (
   <div className='leadership'>
-    <h3>{leaderships.name}</h3>
+    <h3>{leadership.name}</h3>
 
-    <p className='leadership__description'>{leaderships.description}</p>
-    {leaderships.stack && (
+    <p className='leadership__description'>{leadership.description}</p>
+    {leadership.stack && (
       <ul className='leadership__stack'>
-        {leaderships.stack.map((item) => (
+        {leadership.stack.map((item) => (
           <li key={uniqid()} className='leadership__stack-item'>
             {item}
           </li>
@@ -19,9 +19,9 @@ const LeadershipContainer = ({ leaderships }) => (
       </ul>
     )}
     
-    {leaderships.instaDemo && (
+    {leadership.instaDemo && (
       <a
-        href={leaderships.instaDemo}
+        href={leadership.instaDemo}
         aria-label='insta demo'
         className='link link--icon'
       >
@@ -29,9 +29,9 @@ const LeadershipContainer = ({ leaderships }) => (
       </a>
     )}
     
-    {leaderships.sourceCode && (
+    {leadership.sourceCode && (
       <a
-        href={leaderships.sourceCode}
+        href={leadership.sourceCode}
         aria-label='source code'
         className='link link--icon'
       >
@@ -39,9 +39,9 @@ const LeadershipContainer = ({ leaderships }) => (
       </a>
     )}
 
-    {leaderships.livePreview && (
+    {leadership.livePreview && (
       <a
-        href={leaderships.livePreview}
+        href={leadership.livePreview}
         aria-label='live preview'
         className='link link--icon'
       >
@@ -52,4 +52,4 @@ const LeadershipContainer = ({ leaderships }) => (
   </div>
 )
 
-export default LeadershipContainer
+export default LeadershipsContainer

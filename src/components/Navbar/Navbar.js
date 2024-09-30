@@ -4,7 +4,7 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { ThemeContext } from '../../theme';
-import { projects, skills, contact, leadership } from '../../portfolio';
+import { projects, skills, contact, leaderships } from '../../portfolio';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -46,11 +46,11 @@ const Navbar = () => {
           </li>
         )}
 
-        {leadership.length > 0 && (
+        {leaderships.length > 0 && (
           <li className='nav__list-item'>
             <button
               type='button'
-              onClick={() => scrollByPixels(2650)}
+              onClick={() => scrollByPixels(2680)}
               className='link link--nav'
               onKeyPress={(e) => { if (e.key === 'Enter') scrollByPixels(600); }}
             >
@@ -63,7 +63,7 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <button
               type='button'
-              onClick={() => scrollByPixels(4365)}
+              onClick={() => scrollByPixels(4025)}
               className='link link--nav'
               onKeyPress={(e) => { if (e.key === 'Enter') scrollByPixels(900); }}
             >

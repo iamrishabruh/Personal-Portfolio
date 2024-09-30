@@ -52,11 +52,11 @@ const header = {
   ]
   
   // Leadership experience, each entry includes a role, description, and related links.
-  const leadership = [
+  const leaderships = [
     {
       name: 'Community Ambassador', // Leadership role.
       description:
-        'I organized multiple three-day community events at locations like Patel Brothers and retirement homes, boosting South Asian participation in health prescreenings. I led outreach campaigns, coordinated logistics, and connected with community members to raise awareness about clinical trial opportunities. I also organized health fairs and workshops, engaging the public in health initiatives and promoting the role of clinical trials in advancing medical research.', // Brief description of leadership experience and impact.
+        'I organized multiple three-day community events at locations like Patel Brothers and retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
       stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], // Key skills and time period for the role.
       instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', // Instagram link related to this role.
       livePreview: 'http://friends.careaccess.com/6DzP29', // External preview link.
@@ -69,9 +69,9 @@ const header = {
       livePreview: 'https://georgiafbla.org/community-service-awards-csa/', // External link to more information.
     },
     {
-      name: 'Founder & President of Finance & Investment Club', // Leadership role.
+      name: 'Founder of Finance & Investment Club', // Leadership role.
       description:
-        'I founded and led the Finance and Investment Club at South Forsyth High School, growing membership to over 100 students within a summer and securing administrative approval. I organized impactful events featuring notable speakers like the former CEO of Stackfolio and the founder of Hack GT, enhancing financial education and investment exploration. I ensured sustainability by mentoring successors and transitioning responsibilities, fostering a legacy of financial literacy and continued growth.', // Brief description of the role and impact.
+        'I founded and led the Finance and Investment Club at South Forsyth High School, growing membership to over 100 students and organizing events with prominent speakers, including the former CEO of Stackfolio. I fostered sustainability by mentoring successors, ensuring a lasting impact on financial literacy and investment education.', // Brief description of the role and impact.
       stack: ['Leadership', 'Teamwork', 'Organization', '2020-2022'], // Key skills and time period for the role.
       livePreview: 'https://linktr.ee/sfhsfinance/', // External preview link.
     },
@@ -109,4 +109,4 @@ const header = {
   }
   
   // Exporting all defined objects so they can be used in other parts of the codebase.
-  export { header, about, projects, skills, contact, leadership }
+  export { header, about, projects, skills, contact, leaderships }
