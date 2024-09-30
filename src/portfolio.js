@@ -46,7 +46,7 @@ const header = {
       description:
         'I built a personal portfolio website using JavaScript, CSS, HTML, and React to effectively showcase my skills and projects. By utilizing modern web development practices, I focused on clean code and maintainability, demonstrating my expertise in front-end technologies and ability to create visually appealing user interfaces.', // Brief description of the project and impact.
       stack: ['React', 'Node.js', 'Git', 'JavaScript'], // Technologies used in the project.
-      sourceCode: 'https://github.com/iamrishabruh/my-personal-portfolio', // Link to the source code repository.
+      sourceCode: 'https://github.com/iamrishabruh/portfolio', // Link to the source code repository.
       livePreview: 'https://rishabhchouhan.netlify.app/', // Live preview link.
     },
   ]
