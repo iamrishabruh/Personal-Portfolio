@@ -18,7 +18,7 @@ const Header = () => {
         )}
       </h2>
       
-      {/* Always visible*/}
+      {/* Always visible */}
       <Navbar />
     </header>
   );
