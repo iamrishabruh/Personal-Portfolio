@@ -10,12 +10,11 @@ const header = {
     role: 'Software Developer', // Professional role or title.
     descriptions: [
       'CEO of Reachmind',
-      'Passionate software developer', // Series of brief descriptions about the person.
+      'Full stack dev', // Series of brief descriptions about the person.
       'Lifelong learner',
-      '$DADDY holder',
-      'Financial literacy advocate',
-      'Active community participant',
-      'Challenge-driven problem solver',
+      'Literacy advocate',
+      'Active volunteer',
+      'Resilient innovator',
 
     ],
     resume: 'https://drive.google.com/file/d/1yU0CnZKHAxkysUGdmzFYlrkrDagtS0bC/view?usp=sharing', // URL to resume.
@@ -107,7 +106,7 @@ const header = {
   
   // Contact information including email and phone number.
   const contact = {
-    email: 'rchouhan2@student.gsu.edu', // Contact email address.
+    email: 'rchouhan.network@gmail.com', // Contact email address.
     phoneNumber: '+16786759397', // Contact phone number.
   }
   
