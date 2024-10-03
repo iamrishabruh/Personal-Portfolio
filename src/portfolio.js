@@ -10,11 +10,13 @@ const header = {
     role: 'Software Developer', // Professional role or title.
     descriptions: [
       'CEO of Reachmind',
-      'Passionate software developer.', // Series of brief descriptions about the person.
-      'Lifelong learner.',
+      'Passionate software developer', // Series of brief descriptions about the person.
+      'Lifelong learner',
+      '$DADDY holder',
       'Financial literacy advocate',
-      'Active community participant.',
-      'Challenge-driven problem solver.',
+      'Active community participant',
+      'Challenge-driven problem solver',
+
     ],
     resume: 'https://drive.google.com/file/d/1yU0CnZKHAxkysUGdmzFYlrkrDagtS0bC/view?usp=sharing', // URL to resume.
     social: {
