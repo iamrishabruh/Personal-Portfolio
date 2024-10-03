@@ -27,7 +27,7 @@
   }
   
  /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   body {
     overflow-x: hidden; /* Prevent horizontal overflow */
   }

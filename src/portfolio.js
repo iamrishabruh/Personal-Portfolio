@@ -12,6 +12,7 @@ const header = {
       'CEO of Reachmind',
       'Full stack dev', // Series of brief descriptions about the person.
       'Lifelong learner',
+      'Community leader',
       'Literacy advocate',
       'Active volunteer',
       'Resilient innovator',
