@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { header } from '../../portfolio';
 import Navbar from '../Navbar/Navbar';
 import './Header.css';

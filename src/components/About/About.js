@@ -7,7 +7,7 @@ import './About.css';
 
 const About = () => {
   const { name, descriptions, resume, social } = about; // Ensure descriptions is included
-  const [roleTypingStarted, setRoleTypingStarted] = useState(false); // State to control when to start role typing
+  const [roleTypingStarted] = useState(false); // State to control when to start role typing
   const roleDelay = 1000; // Set the delay for the role typing
 
   return (
