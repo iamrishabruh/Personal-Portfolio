@@ -9,8 +9,7 @@ const header = {
     name: 'Rishabh Chouhan', // Full name.
     role: 'Software Developer', // Professional role or title.
     descriptions: [
-      'CEO of Reachmind',
-      'Full stack dev', // Series of brief descriptions about the person.
+      'Front-end developer',
       'Lifelong learner',
       'Community leader',
       'Literacy advocate',
@@ -18,7 +17,7 @@ const header = {
       'Resilient innovator',
 
     ],
-    resume: 'https://drive.google.com/file/d/1yU0CnZKHAxkysUGdmzFYlrkrDagtS0bC/view?usp=sharing', // URL to resume.
+    resume: 'https://docs.google.com/document/d/18RC9N_Lowmegpl_h6uemEKKf5GSEjWLYMhf0E6mCabg/edit?usp=sharing', // URL to resume.
     social: {
       linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', // LinkedIn profile link.
       github: 'https://github.com/iamrishabruh', // GitHub profile link.
@@ -47,7 +46,7 @@ const header = {
     {
       name: 'Personal Portfolio Website', // Project name.
       description:
-        'I built a personal portfolio website using JavaScript, CSS, HTML, and React to effectively showcase my skills and projects. By utilizing modern web development practices, I focused on clean code and maintainability, demonstrating my expertise in front-end technologies and ability to create visually appealing user interfaces.', // Brief description of the project and impact.
+        'I built a personal portfolio website to effectively showcase my skills and projects. By utilizing modern web development practices, I focused on clean code and maintainability, demonstrating my expertise in front-end technologies and ability to create visually appealing user interfaces.', // Brief description of the project and impact.
       stack: ['React', 'Node.js', 'Git', 'JavaScript'], // Technologies used in the project.
       sourceCode: 'https://github.com/iamrishabruh/portfolio', // Link to the source code repository.
       livePreview: 'https://rishabhchouhan.netlify.app/', // Live preview link.
@@ -68,7 +67,7 @@ const header = {
       name: 'CSA Achievement Award', // Leadership role.
       description:
         'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', // Brief description of the award.
-      stack: ['Volunteer', 'MealsByGrace', 'Sewa International', 'Shelters'], // Key skills and organizations involved.
+      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], // Key skills and organizations involved.
       livePreview: 'https://georgiafbla.org/community-service-awards-csa/', // External link to more information.
     },
     {
@@ -86,29 +85,31 @@ const header = {
     'C++',
     'Python',
     'JavaScript',
-    'React',
-    'SQL',
-    'Git',
-    'CI/CD',
-    'Shell',
-    'Swift',
-    'XCTest',
+    'TypeScript',
     'HTML',
-    'Agile',
-    'Kubernetes',
+    'CSS',
+    'Swift',
+    'React.js',
+    'Bootstrap',
+    'Tailwind.css',
     'Pandas',
     'NumPy',
+    'Django',
+    'XCTest',
+    'Git',
+    'Shell',
     'Node.js',
-    'Bash',
+    'Postman',
     'Jenkins',
-    'TensorFlow',
-    'Teamwork', // Soft skill.
+    'Kubernetes',
+    'Figma',
+    'Docker'
   ]
   
   // Contact information including email and phone number.
   const contact = {
-    email: 'rchouhan.network@gmail.com', // Contact email address.
-    phoneNumber: '+16786759397', // Contact phone number.
+    email: 'rchouhan.network@gmail.com', 
+    phoneNumber: '+16786759397', 
   }
   
   // Exporting all defined objects so they can be used in other parts of the codebase.

@@ -50,11 +50,6 @@
     display: flex; /* Show list when toggled */
     top: 0; /* Reset top position when visible */
   }
-
-  .nav__hamburger {
-    display: block; /* Show hamburger icon on smaller screens */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  }
 }
 
 
