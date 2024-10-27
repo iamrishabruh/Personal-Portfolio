@@ -1,13 +1,13 @@
 // Header information for the website, including homepage URL and title.
 const header = {
-    homepage: 'https://rishabhchouhan.netlify.app', // Personal portfolio homepage URL.
-    title: 'RC', // Title or abbreviation for display on the website header.
+    homepage: 'https://rishabhchouhan.netlify.app',
+    title: 'RC',
   }
   
   // Information about the person, including name, role, descriptions, and social media links.
   const about = {
-    name: 'Rishabh Chouhan', // Full name.
-    role: 'Software Developer', // Professional role or title.
+    name: 'Rishabh Chouhan', 
+    role: 'Software Developer', 
     descriptions: [
       'Front-end developer',
       'Lifelong learner',
@@ -19,36 +19,36 @@ const header = {
     ],
     resume: 'https://docs.google.com/document/d/18RC9N_Lowmegpl_h6uemEKKf5GSEjWLYMhf0E6mCabg/edit?usp=sharing', // URL to resume.
     social: {
-      linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', // LinkedIn profile link.
-      github: 'https://github.com/iamrishabruh', // GitHub profile link.
+      linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', 
+      github: 'https://github.com/iamrishabruh', 
     },
   }
   
   // List of projects showcasing skills and experience. Each project includes name, description, technologies used, and links to demos or live previews.
   const projects = [
     {
-      name: 'AI Chatbot SaaS', // Project name.
+      name: 'AI Chatbot SaaS',
       description:
         'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.', // Brief description of the project and impact.
-      stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'], // Technologies used in the project.
-      videoDemo: 'https://www.youtube.com/watch?v=0WnG67pE9GE', // Link to a video demo.
-      livePreview: 'https://reachmindllc.com', // Live preview link.
+      stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'], 
+      videoDemo: 'https://www.youtube.com/watch?v=0WnG67pE9GE', 
+      livePreview: 'https://reachmindllc.com', 
     },
     {
-      name: 'Drug Interaction Checker', // Project name.
+      name: 'Drug Interaction Checker',
       description:
         'Integrated the NIH Drug Interaction API into the flagship Kaiser Permanente iOS app, providing real-time drug interaction insights for 9 million daily users. Developed a proof-of-concept UI/UX using Swift and Xcode, adhering to Kaisers CSS guidelines for a seamless experience.', // Brief description of the project and impact.
-      stack: ['Swift', 'RESTful API', 'Xcode', 'XCTest'], // Technologies used in the project.
-      videoDemo: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', // Link to a video demo.
-      sourceCode: 'https://github.com/iamrishabruh/drug-interaction-feature', // Link to the source code repository.
-      livePreview: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', // Live preview link.
+      stack: ['Swift', 'RESTful API', 'Xcode', 'XCTest'], 
+      videoDemo: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', 
+      sourceCode: 'https://github.com/iamrishabruh/drug_interaction_checker', 
+      livePreview: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', 
     },
     {
-      name: 'QKD Domain Specific Language', // Project name.
+      name: 'QKD Domain Specific Language', 
       description:
         'I developed a basic DSL for Quantum Key Distribution, supporting BB84 protocol operations like key generation and eavesdropping checks, with plans for advanced quantum processes.', // Brief description of the project and impact.
-      stack: ['Qiskit', 'Python', 'Git', 'PLY'], // Technologies used in the project.
-      sourceCode: 'https://github.com/iamrishabruh/PQC', // Link to the source code repository.
+      stack: ['Qiskit', 'Python', 'Git', 'PLY'],
+      sourceCode: 'https://github.com/iamrishabruh/PQC', 
       
     },
   ]
@@ -56,32 +56,32 @@ const header = {
   // Leadership experience, each entry includes a role, description, and related links.
   const leaderships = [
     {
-      name: 'Community Ambassador', // Leadership role.
+      name: 'Community Ambassador', 
       description:
         'I organized multiple three-day community events at locations like Patel Brothers and retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
-      stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], // Key skills and time period for the role.
-      instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', // Instagram link related to this role.
-      livePreview: 'http://friends.careaccess.com/6DzP29', // External preview link.
+      stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], 
+      instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', 
+      livePreview: 'http://friends.careaccess.com/6DzP29', 
     },
     {
-      name: 'CSA Achievement Award', // Leadership role.
+      name: 'CSA Achievement Award', 
       description:
-        'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', // Brief description of the award.
-      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], // Key skills and organizations involved.
-      livePreview: 'https://georgiafbla.org/community-service-awards-csa/', // External link to more information.
+        'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', 
+      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], 
+      livePreview: 'https://georgiafbla.org/community-service-awards-csa/', 
     },
     {
-      name: 'Founder of Finance & Investment Club', // Leadership role.
+      name: 'Founder of Finance & Investment Club', 
       description:
-        'I founded and led the Finance and Investment Club at South Forsyth High School, growing membership to over 100 students and organizing events with prominent speakers, including the former CEO of Stackfolio. I fostered sustainability by mentoring successors, ensuring a lasting impact on financial literacy and investment education.', // Brief description of the role and impact.
-      stack: ['Leadership', 'Teamwork', 'Organization', '2020-2022'], // Key skills and time period for the role.
-      livePreview: 'https://linktr.ee/sfhsfinance/', // External preview link.
+        'I founded and led the Finance and Investment Club at South Forsyth High School, growing membership to over 100 students and organizing events with prominent speakers, including the former CEO of Stackfolio. I fostered sustainability by mentoring successors, ensuring a lasting impact on financial literacy and investment education.', 
+      stack: ['Leadership', 'Teamwork', 'Organization', 'Communication'], 
+      livePreview: 'https://linktr.ee/sfhsfinance/', 
     },
   ]
   
   // List of key technical and soft skills.
   const skills = [
-    'C', // Programming language skill.
+    'C', 
     'C++',
     'Python',
     'JavaScript',
@@ -102,7 +102,7 @@ const header = {
     'Postman',
     'Jenkins',
     'Kubernetes',
-    'Figma',
+    'Qiskit',
     'Docker'
   ]
   
