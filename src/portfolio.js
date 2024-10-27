@@ -27,7 +27,7 @@ const header = {
   // List of projects showcasing skills and experience. Each project includes name, description, technologies used, and links to demos or live previews.
   const projects = [
     {
-      name: 'Reachmind - Startup AI Chatbot SaaS', // Project name.
+      name: 'AI Chatbot SaaS', // Project name.
       description:
         'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.', // Brief description of the project and impact.
       stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'], // Technologies used in the project.
@@ -35,21 +35,21 @@ const header = {
       livePreview: 'https://reachmindllc.com', // Live preview link.
     },
     {
-      name: 'Drug Interaction Proof of Concept', // Project name.
+      name: 'Drug Interaction Checker', // Project name.
       description:
         'Integrated the NIH Drug Interaction API into the flagship Kaiser Permanente iOS app, providing real-time drug interaction insights for 9 million daily users. Developed a proof-of-concept UI/UX using Swift and Xcode, adhering to Kaisers CSS guidelines for a seamless experience.', // Brief description of the project and impact.
       stack: ['Swift', 'RESTful API', 'Xcode', 'XCTest'], // Technologies used in the project.
       videoDemo: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', // Link to a video demo.
-      sourceCode: 'https://github.com/iamrishabruh/DrugInteractionFeature', // Link to the source code repository.
+      sourceCode: 'https://github.com/iamrishabruh/drug-interaction-feature', // Link to the source code repository.
       livePreview: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', // Live preview link.
     },
     {
-      name: 'Personal Portfolio Website', // Project name.
+      name: 'QKD Domain Specific Language', // Project name.
       description:
-        'I built a personal portfolio website to effectively showcase my skills and projects. By utilizing modern web development practices, I focused on clean code and maintainability, demonstrating my expertise in front-end technologies and ability to create visually appealing user interfaces.', // Brief description of the project and impact.
-      stack: ['React', 'Node.js', 'Git', 'JavaScript'], // Technologies used in the project.
-      sourceCode: 'https://github.com/iamrishabruh/portfolio', // Link to the source code repository.
-      livePreview: 'https://rishabhchouhan.netlify.app/', // Live preview link.
+        'I developed a basic DSL for Quantum Key Distribution, supporting BB84 protocol operations like key generation and eavesdropping checks, with plans for advanced quantum processes.', // Brief description of the project and impact.
+      stack: ['Qiskit', 'Python', 'Git', 'PLY'], // Technologies used in the project.
+      sourceCode: 'https://github.com/iamrishabruh/PQC', // Link to the source code repository.
+      
     },
   ]
   
