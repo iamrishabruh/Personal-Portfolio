@@ -58,7 +58,7 @@ const header = {
     {
       name: 'Community Ambassador', 
       description:
-        'I organized multiple three-day community events at locations like Patel Brothers and retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
+        'I organized multiple three-day community events at locations like Patel Brothers and senior retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
       stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], 
       instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', 
       livePreview: 'http://friends.careaccess.com/6DzP29', 
@@ -71,11 +71,11 @@ const header = {
       livePreview: 'https://georgiafbla.org/community-service-awards-csa/', 
     },
     {
-      name: 'Founder of Finance & Investment Club', 
+      name: 'Outlier AI University Coder Push', 
       description:
-        'I founded and led the Finance and Investment Club at South Forsyth High School, growing membership to over 100 students and organizing events with prominent speakers, including the former CEO of Stackfolio. I fostered sustainability by mentoring successors, ensuring a lasting impact on financial literacy and investment education.', 
-      stack: ['Leadership', 'Teamwork', 'Organization', 'Communication'], 
-      livePreview: 'https://linktr.ee/sfhsfinance/', 
+        'Organized and led a 2.5 day Outlier AI University Coders event, engaging students in interactive onboarding, live Q&A sessions, and team-based coding challenges. Delivered a prerecorded demo and provided hands-on guidance to ensure over 25 participants successfully completed the program. Demonstrated skills in technical communication, event management, and fostering a collaborative learning environment.', 
+      stack: ['Leadership', 'Generative AI', 'Organization', 'Communication'], 
+      livePreview: 'https://www.linkedin.com/feed/update/urn:li:activity:7263324912482758656/', 
     },
   ]
   
