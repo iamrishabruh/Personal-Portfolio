@@ -9,15 +9,16 @@ const header = {
     name: 'Rishabh Chouhan', 
     role: 'Software Developer', 
     descriptions: [
-      'Front-end developer',
-      'Lifelong learner',
+      'Software Engineer',
+      'Lifelong curious learner',
       'Community leader',
       'Literacy advocate',
       'Active volunteer',
       'Resilient innovator',
+      'Intellectual',
 
     ],
-    resume: 'https://docs.google.com/document/d/18RC9N_Lowmegpl_h6uemEKKf5GSEjWLYMhf0E6mCabg/edit?usp=sharing', // URL to resume.
+    resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing', // URL to resume.
     social: {
       linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', 
       github: 'https://github.com/iamrishabruh', 
