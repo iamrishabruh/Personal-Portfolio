@@ -5,3 +5,27 @@
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     grid-gap: 2em;
   }
+
+.projects {
+  position: relative;
+}
+
+.loading {
+  text-align: center;
+  color: var(--clr-fg);
+  font-size: 1.2em;
+  padding: 2em;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

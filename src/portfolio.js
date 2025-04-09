@@ -115,3 +115,34 @@ const header = {
   
   // Exporting all defined objects so they can be used in other parts of the codebase.
   export { header, about, projects, skills, contact, leaderships }
+
+// Function to fetch and update projects from GitHub
+export const updateProjects = async () => {
+  try {
+    const githubProjects = await fetchGitHubRepos(process.env.REACT_APP_GITHUB_USERNAME || 'iamrishabruh');
+    projects = [
+      // Keep your existing featured projects
+      {
+        name: 'AI Chatbot SaaS',
+        description:
+          'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.',
+        stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'],
+        videoDemo: 'https://www.youtube.com/watch?v=0WnG67pE9GE',
+        livePreview: 'https://reachmindllc.com',
+      },
+      {
+        name: 'Drug Interaction Checker',
+        description:
+          'Integrated the NIH Drug Interaction API into the flagship Kaiser Permanente iOS app, providing real-time drug interaction insights for 9 million daily users. Developed a proof-of-concept UI/UX using Swift and Xcode, adhering to Kaisers CSS guidelines for a seamless experience.',
+        stack: ['Swift', 'RESTful API', 'Xcode', 'XCTest'],
+        videoDemo: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view',
+        sourceCode: 'https://github.com/iamrishabruh/drug_interaction_checker',
+        livePreview: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view',
+      },
+      // Add GitHub projects
+      ...githubProjects,
+    ];
+  } catch (error) {
+    console.error('Error updating projects:', error);
+  }
+};
