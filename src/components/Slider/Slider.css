@@ -7,7 +7,7 @@
 .slider__content {
   width: 100%;
   transition: transform 0.5s ease;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .slider__item {
@@ -34,11 +34,11 @@
 }
 
 .slider__button--left {
-  left: 2rem;
+  left: 1rem;
 }
 
 .slider__button--right {
-  right: 2rem;
+  right: 1rem;
 }
 
 .slider__button svg {
@@ -73,15 +73,15 @@
 
 @media (max-width: 600px) {
   .slider__content {
-    padding: 0 1.5rem;
+    padding: 0 0.75rem;
   }
 
   .slider__button--left {
-    left: 1.5rem;
+    left: 0.75rem;
   }
 
   .slider__button--right {
-    right: 1.5rem;
+    right: 0.75rem;
   }
 
   .slider__button {
