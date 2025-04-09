@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../theme';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [{ themeName, toggleTheme }] = useContext(ThemeContext);
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
+      const offset = sectionId === 'projects' || sectionId === 'leaderships' ? 150 : 100;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - 100;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
