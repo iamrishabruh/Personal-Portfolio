@@ -3,7 +3,7 @@ import fetchGitHubRepos from './services/githubService';
 // Header information for the website, including homepage URL and title.
 const header = {
     homepage: 'https://rishabhchouhan.netlify.app',
-    title: 'RC',
+    title: 'Rishabh Chouhan',
   }
   
   // Information about the person, including name, role, descriptions, and social media links.
