@@ -1,26 +1,13 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../theme';
 import './Navbar.css';
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    const navbarHeight = 60; // Height of the navbar
+    const navbarHeight = 60;
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
@@ -32,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav className='nav'>
       <ul className='nav__list'>
         <li className='nav__list-item'>
           <button

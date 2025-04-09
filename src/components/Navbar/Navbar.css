@@ -47,15 +47,15 @@
 
 .nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 1rem 2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1rem;
   position: fixed;
-  top: 0;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
   z-index: 1000;
   background: transparent;
-  transition: all 0.3s ease;
 }
 
 .nav.scrolled {
@@ -70,10 +70,11 @@
 
 .nav__list {
   display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav__list-item {
@@ -81,50 +82,45 @@
 }
 
 .link--nav {
-  color: #ffffff;
+  color: var(--clr-fg);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-family: inherit;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
   position: relative;
-  opacity: 0.8;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .link--nav:hover {
   opacity: 1;
-  color: #ffffff;
-}
-
-.link--nav::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transition: width 0.3s ease;
-}
-
-.link--nav:hover::after {
-  width: 100%;
+  transform: translateX(-5px);
 }
 
 @media (max-width: 768px) {
   .nav {
-    padding: 1rem;
+    top: 0;
+    right: 0;
+    transform: none;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
   }
   
   .nav__list {
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .link--nav:hover {
+    transform: translateY(-2px);
   }
 }
 
