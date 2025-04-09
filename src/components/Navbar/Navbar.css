@@ -46,34 +46,54 @@
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px; 
-    background-color: var(--clr-navbar-bg); /* Navbar background color */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav__list-item {
+  margin: 0;
+}
+
+.link--nav {
+  color: var(--clr-fg);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link--nav:hover {
+  color: var(--clr-primary);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
   }
   
   .nav__list {
-    display: flex; 
-    list-style-type: none; /* Remove bullet points for list items */
-    padding: 0;
-    margin: 0;
+    gap: 1rem;
   }
-  
-  .nav__list--show {
-    display: flex; /* Display list when menu is toggled */
-    flex-direction: row; /* Ensure items are horizontal by default */
-  }
-  
-  .nav__list-item {
-    margin: 0 15px; /* Space between each list item */
-  }
-  
-  .nav__hamburger {
-    display: none; /* Hidden by default, visible on mobile */
-  }
-  
- /* Mobile responsiveness */
+}
+
+.nav__hamburger {
+  display: none; /* Hidden by default, visible on mobile */
+}
+
+/* Mobile responsiveness */
 @media (max-width: 600px) {
   body {
     overflow-x: hidden; /* Prevent horizontal overflow */

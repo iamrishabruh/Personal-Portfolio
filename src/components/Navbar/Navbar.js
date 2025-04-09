@@ -2,30 +2,30 @@ import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => (
-  <nav className='navbar'>
-    <ul className='nav-links'>
-      <li>
-        <Link to='/' className='nav-link'>
+  <nav className='nav'>
+    <ul className='nav__list'>
+      <li className='nav__list-item'>
+        <Link to='/' className='link link--nav'>
           Home
         </Link>
       </li>
-      <li>
-        <Link to='/about' className='nav-link'>
+      <li className='nav__list-item'>
+        <Link to='/about' className='link link--nav'>
           About
         </Link>
       </li>
-      <li>
-        <Link to='/projects' className='nav-link'>
+      <li className='nav__list-item'>
+        <Link to='/projects' className='link link--nav'>
           Projects
         </Link>
       </li>
-      <li>
-        <Link to='/skills' className='nav-link'>
+      <li className='nav__list-item'>
+        <Link to='/skills' className='link link--nav'>
           Skills
         </Link>
       </li>
-      <li>
-        <Link to='/contact' className='nav-link'>
+      <li className='nav__list-item'>
+        <Link to='/contact' className='link link--nav'>
           Contact
         </Link>
       </li>
