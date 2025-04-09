@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import './Slider.css';
 
 const Slider = ({ items, renderItem }) => {
@@ -54,7 +52,7 @@ const Slider = ({ items, renderItem }) => {
         onClick={prevSlide}
         aria-label="Previous slide"
       >
-        <ArrowBackIosIcon />
+        ←
       </button>
       
       <div 
@@ -72,7 +70,7 @@ const Slider = ({ items, renderItem }) => {
         onClick={nextSlide}
         aria-label="Next slide"
       >
-        <ArrowForwardIosIcon />
+        →
       </button>
       
       <div className="slider__dots">

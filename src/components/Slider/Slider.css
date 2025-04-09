@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: 3rem;
 }
 
@@ -30,6 +30,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .slider__button:hover {
@@ -45,8 +49,8 @@
 }
 
 .slider__button svg {
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
   fill: currentColor;
 }
 
@@ -88,6 +92,9 @@
   .slider__button {
     padding: 0.25rem;
     bottom: -2rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
   }
 
   .slider__button--left {
@@ -96,11 +103,6 @@
 
   .slider__button--right {
     right: 35%;
-  }
-
-  .slider__button svg {
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   .slider__dots {
