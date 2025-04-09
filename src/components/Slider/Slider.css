@@ -27,6 +27,9 @@
   z-index: 10;
   transition: opacity 0.3s ease;
   opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider__button:hover {
@@ -44,6 +47,7 @@
 .slider__button svg {
   width: 2rem;
   height: 2rem;
+  fill: currentColor;
 }
 
 .slider__dots {
