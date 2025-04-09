@@ -28,7 +28,7 @@ const header = {
   }
   
   // List of projects - this will be populated dynamically from GitHub
-  let projects = []
+  const projects = [];
   
   // Function to fetch and update projects from GitHub
   export const updateProjects = async () => {
@@ -56,7 +56,9 @@ const header = {
         // Add GitHub projects
         ...githubProjects,
       ];
-      projects = updatedProjects;
+      // Update the projects array by pushing new items
+      projects.length = 0; // Clear the array
+      projects.push(...updatedProjects); // Add new items
     } catch (error) {
       console.error('Error updating projects:', error);
     }

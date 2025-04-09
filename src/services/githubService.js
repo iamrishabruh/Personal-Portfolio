@@ -1,68 +1,63 @@
 const GITHUB_API_URL = 'https://api.github.com';
 
-// Cache duration in milliseconds (1 hour)
-const CACHE_DURATION = 60 * 60 * 1000;
-
-// Cache object
-let cache = {
+// Cache configuration
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
+const cache = {
   data: null,
-  timestamp: null
+  timestamp: null,
 };
 
-export const fetchGitHubRepos = async (username) => {
-  // Check if we have cached data that's still valid
-  if (cache.data && cache.timestamp && (Date.now() - cache.timestamp) < CACHE_DURATION) {
-    return cache.data;
-  }
-
+// Function to fetch GitHub repositories
+const fetchGitHubRepos = async (username) => {
   try {
-    const headers = {
-      'Accept': 'application/vnd.github.v3+json',
-    };
-
-    // Add GitHub token if available
-    if (process.env.REACT_APP_GITHUB_TOKEN) {
-      headers['Authorization'] = `token ${process.env.REACT_APP_GITHUB_TOKEN}`;
+    // Check if we have valid cached data
+    if (cache.data && cache.timestamp && Date.now() - cache.timestamp < CACHE_DURATION) {
+      return cache.data;
     }
 
-    const response = await fetch(`${GITHUB_API_URL}/users/${username}/repos?sort=updated&direction=desc`, {
-      headers
-    });
+    const headers = {
+      Accept: 'application/vnd.github.v3+json',
+    };
+
+    // Add authorization if token is available
+    if (process.env.REACT_APP_GITHUB_TOKEN) {
+      headers.Authorization = `token ${process.env.REACT_APP_GITHUB_TOKEN}`;
+    } else {
+      console.warn('No GitHub token found. Using unauthenticated requests with lower rate limits.');
+    }
+
+    const response = await fetch(`${GITHUB_API_URL}/users/${username}/repos`, { headers });
 
     if (!response.ok) {
-      throw new Error('Failed to fetch GitHub repositories');
+      throw new Error(`GitHub API error: ${response.status}`);
     }
 
     const repos = await response.json();
-    
-    // Format and filter repositories
+
+    // Filter and format the repositories
     const formattedRepos = repos
-      .filter(repo => !repo.fork && !repo.private)
+      .filter(repo => !repo.private && !repo.fork)
       .map(repo => ({
         name: repo.name,
         description: repo.description || 'No description available',
         stack: repo.topics || [],
         sourceCode: repo.html_url,
-        livePreview: repo.homepage || null,
-        updatedAt: new Date(repo.updated_at).toLocaleDateString(),
+        livePreview: repo.homepage,
         stars: repo.stargazers_count,
         forks: repo.forks_count,
         language: repo.language,
-        demo: null,
-        images: [],
-        videoDemo: null,
       }));
 
     // Update cache
-    cache = {
-      data: formattedRepos,
-      timestamp: Date.now()
-    };
+    cache.data = formattedRepos;
+    cache.timestamp = Date.now();
 
     return formattedRepos;
   } catch (error) {
     console.error('Error fetching GitHub repositories:', error);
-    // Return cached data if available, even if expired
+    // Return cached data if available, otherwise empty array
     return cache.data || [];
   }
-}; 
+};
+
+export default fetchGitHubRepos; 
