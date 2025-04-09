@@ -34,13 +34,11 @@
 }
 
 .slider__button--left {
-  left: 50%;
-  transform: translateX(-150%);
+  left: 40%;
 }
 
 .slider__button--right {
-  right: 50%;
-  transform: translateX(150%);
+  right: 40%;
 }
 
 .slider__button svg {
@@ -57,6 +55,7 @@
   bottom: -3.5rem;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
 }
 
 .slider__dot {
@@ -85,6 +84,14 @@
   .slider__button {
     padding: 0.25rem;
     bottom: -2rem;
+  }
+
+  .slider__button--left {
+    left: 35%;
+  }
+
+  .slider__button--right {
+    right: 35%;
   }
 
   .slider__button svg {
