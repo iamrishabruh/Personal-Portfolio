@@ -3,6 +3,8 @@
     line-height: 1.5;
     color: var(--clr-fg);
     background-color: var(--clr-bg);
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
   }
   
   .light {
@@ -28,11 +30,13 @@
   main {
     max-width: 1100px;
     width: 95%;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
   }
   
   .section {
-    margin-top: 45em;
+    padding: 2rem 0;
+    scroll-margin-top: 60px;
   }
   
   .section__title {
@@ -146,8 +150,8 @@
     transform: translateY(-5px);
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .section {
-      margin-top: 4em;
+      padding: 1.5rem 0;
     }
   }
