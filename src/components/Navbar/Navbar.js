@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -8,7 +7,7 @@ const Navbar = () => {
     if (element) {
       const navbarHeight = window.innerWidth <= 600 ? 50 : 60;
       const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - navbarHeight;
+      const offsetPosition = elementPosition - navbarHeight - 40;
 
       window.scrollTo({
         top: offsetPosition,
