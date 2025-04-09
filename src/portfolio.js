@@ -1,45 +1,38 @@
 import fetchGitHubRepos from './services/githubService';
 
-// Header information for the website, including homepage URL and title.
-const header = {
-    homepage: 'https://rishabhchouhan.netlify.app',
-    title: 'Rishabh Chouhan',
-  }
-  
-  // Information about the person, including name, role, descriptions, and social media links.
-  const about = {
-    name: 'Rishabh Chouhan', 
-    role: 'Software Developer', 
-    descriptions: [
-      'Software Engineer',
-      'Curious learner',
-      'Community leader',
-      'Literacy advocate',
-      'Active volunteer',
-      'Resilient entrepreneur',
-      'Open minded',
+// Information about the person, including name, role, descriptions, and social media links.
+const about = {
+  name: 'Rishabh Chouhan', 
+  role: 'Software Developer', 
+  descriptions: [
+    'Software Engineer',
+    'Lifelong curious learner',
+    'Community leader',
+    'Literacy advocate',
+    'Active volunteer',
+    'Resilient innovator',
+    'Intellectual',
+  ],
+  resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing',
+  social: {
+    linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', 
+    github: 'https://github.com/iamrishabruh', 
+  },
+}
 
-    ],
-    resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing', // URL to resume.
-    social: {
-      linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', 
-      github: 'https://github.com/iamrishabruh', 
-    },
-  }
-  
-  // List of projects - this will be populated dynamically from GitHub
-  const projects = [];
-  
-  // Function to fetch and update projects from GitHub
-  export const updateProjects = async () => {
-    try {
-      const githubProjects = await fetchGitHubRepos(process.env.REACT_APP_GITHUB_USERNAME || 'iamrishabruh');
-      const updatedProjects = [
-        // Keep your existing featured projects
-        {
-          name: 'AI Chatbot SaaS',
-          description:
-            'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.', // Brief description of the project and impact.
+// List of projects - this will be populated dynamically from GitHub
+const projects = [];
+
+// Function to fetch and update projects from GitHub
+export const updateProjects = async () => {
+  try {
+    const githubProjects = await fetchGitHubRepos(process.env.REACT_APP_GITHUB_USERNAME || 'iamrishabruh');
+    const updatedProjects = [
+      // Keep your existing featured projects
+      {
+        name: 'AI Chatbot SaaS',
+        description:
+          'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.', // Brief description of the project and impact.
           stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'], 
           videoDemo: 'https://www.youtube.com/watch?v=0WnG67pE9GE', 
           livePreview: 'https://reachmindllc.com', 
@@ -149,4 +142,4 @@ const header = {
   ]
   
   // Exporting all defined objects so they can be used in other parts of the codebase.
-  export { header, about, projects, skills, contact, leaderships }
+  export { about, projects, skills, contact, leaderships }
