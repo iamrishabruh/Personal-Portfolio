@@ -1,4 +1,4 @@
-import { fetchGitHubRepos } from './services/githubService';
+import fetchGitHubRepos from './services/githubService';
 
 // Header information for the website, including homepage URL and title.
 const header = {
