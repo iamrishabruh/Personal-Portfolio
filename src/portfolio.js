@@ -65,31 +65,53 @@ const header = {
   }
   
   // List of key technical and soft skills.
-  const skills = [
-    'C', 
-    'C++',
-    'Python',
-    'JavaScript',
-    'TypeScript',
-    'HTML',
-    'CSS',
-    'Swift',
-    'React.js',
-    'Bootstrap',
-    'Tailwind.css',
-    'Pandas',
-    'NumPy',
-    'Django',
-    'XCTest',
-    'Git',
-    'Shell',
-    'Node.js',
-    'Postman',
-    'Jenkins',
-    'Kubernetes',
-    'Qiskit',
-    'Docker'
-  ]
+  export const skills = {
+    frontend: [
+      'React.js',
+      'Next.js',
+      'TypeScript',
+      'JavaScript',
+      'Flutter (Dart)',
+      'HTML/CSS',
+      'Tailwind CSS',
+      'Bootstrap',
+      'PWA'
+    ],
+    backend: [
+      'C++',
+      'Python',
+      'Node.js',
+      'Express.js',
+      'Solidity',
+      'SQL',
+      'JWT',
+      'Go',
+      'MongoDB',
+      'TimescaleDB'
+    ],
+    tools: [
+      'Linux',
+      'Git',
+      'VS Code',
+      'Xcode',
+      'Docker',
+      'Azure DevOps',
+      'Jenkins',
+      'Postman',
+      'Apache Kafka',
+      'Apache Spark'
+    ],
+    other: [
+      'Swift',
+      'XCTest',
+      'Kotlin',
+      'TensorFlow',
+      'PyTorch',
+      'Pandas',
+      'NumPy',
+      'Langchain'
+    ]
+  };
   
   // Contact information including email and phone number.
   const contact = {

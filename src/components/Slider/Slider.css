@@ -1,105 +1,76 @@
 .slider {
   position: relative;
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2em 0;
+  overflow: hidden;
 }
 
-.slider__content {
-  width: 100%;
-  min-height: 300px;
+.slider__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
+  transition: transform 0.5s ease;
+}
+
+.slider__item {
+  min-width: 100%;
+  padding: 0 1rem;
 }
 
 .slider__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--clr-bg-alt);
+  background: none;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
+  font-size: 2rem;
   color: var(--clr-fg);
-  box-shadow: var(--shadow);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
   z-index: 10;
-  transition: transform 0.2s ease;
 }
 
 .slider__button:hover {
-  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
 }
 
-.slider__button--left {
-  left: 20px;
+.slider__button--prev {
+  left: 1rem;
 }
 
-.slider__button--right {
-  right: 20px;
+.slider__button--next {
+  right: 1rem;
 }
 
 .slider__dots {
   display: flex;
   justify-content: center;
-  margin-top: 1em;
-  gap: 0.5em;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .slider__dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--clr-fg-alt);
-  border: none;
+  background: var(--clr-fg);
+  opacity: 0.3;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
-.slider__dot:hover {
-  transform: scale(1.2);
+.slider__dot.active {
+  opacity: 1;
 }
 
-.slider__dot--active {
-  background: var(--clr-primary);
-  transform: scale(1.2);
-}
-
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .slider__button {
-    width: 35px;
-    height: 35px;
+    font-size: 1.5rem;
   }
-
-  .slider__button--left {
-    left: 10px;
+  
+  .slider__button--prev {
+    left: 0.5rem;
   }
-
-  .slider__button--right {
-    right: 10px;
-  }
-
-  .slider__content {
-    min-height: 250px;
-    padding: 0.5em;
-  }
-}
-
-@media (max-width: 480px) {
-  .slider__button {
-    width: 30px;
-    height: 30px;
-  }
-
-  .slider__dots {
-    margin-top: 0.5em;
+  
+  .slider__button--next {
+    right: 0.5rem;
   }
 } 
