@@ -54,6 +54,9 @@
   top: 0;
   right: 0;
   z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav__list {
@@ -61,7 +64,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav__list-item {
@@ -69,29 +72,47 @@
 }
 
 .link--nav {
-  color: var(--clr-fg);
+  color: #2d3748;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: inherit;
+  font-size: 0.95rem;
   font-family: inherit;
-  padding: 0;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 .link--nav:hover {
-  color: var(--clr-primary);
+  color: #4a5568;
+}
+
+.link--nav::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4a5568;
+  transition: width 0.3s ease;
+}
+
+.link--nav:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .nav {
     padding: 1rem;
+    width: 100%;
+    justify-content: center;
   }
   
   .nav__list {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 

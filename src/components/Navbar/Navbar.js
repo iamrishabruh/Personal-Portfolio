@@ -7,8 +7,14 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
+    const navbarHeight = 60; // Height of the navbar
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 

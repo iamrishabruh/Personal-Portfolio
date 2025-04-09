@@ -20,19 +20,19 @@ const App = () => {
       <Header />
 
       <main>
-        <section id="about">
+        <section id="about" className="section">
           <About />
         </section>
-        <section id="projects">
+        <section id="projects" className="section">
           <Projects />
         </section>
-        <section id="leaderships">
+        <section id="leaderships" className="section">
           <Leaderships />
         </section>
-        <section id="skills">
+        <section id="skills" className="section">
           <Skills />
         </section>
-        <section id="contact">
+        <section id="contact" className="section">
           <Contact />
         </section>
       </main>

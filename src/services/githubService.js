@@ -26,21 +26,46 @@ const fetchGitHubRepos = async (username) => {
       console.warn('No GitHub token found. Using unauthenticated requests with lower rate limits.');
     }
 
-    const response = await fetch(`${GITHUB_API_URL}/users/${username}/repos`, { headers });
+    const response = await fetch(`${GITHUB_API_URL}/users/${username}/repos?sort=updated&direction=desc`, {
+      headers,
+      cache: 'no-cache',
+    });
 
     if (!response.ok) {
       throw new Error(`GitHub API error: ${response.status}`);
     }
 
     const repos = await response.json();
+    
+    // Fetch languages for each repository
+    const reposWithLanguages = await Promise.all(
+      repos.map(async (repo) => {
+        const languagesResponse = await fetch(`${GITHUB_API_URL}/repos/${username}/${repo.name}/languages`, {
+          headers: {
+            'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github.v3+json',
+          },
+        });
 
-    // Filter and format the repositories
-    const formattedRepos = repos
-      .filter(repo => !repo.private && !repo.fork)
-      .map(repo => ({
+        if (!languagesResponse.ok) {
+          return { ...repo, languages: [] };
+        }
+
+        const languages = await languagesResponse.json();
+        return {
+          ...repo,
+          languages: Object.keys(languages),
+        };
+      })
+    );
+
+    // Filter and format repositories
+    const formattedRepos = reposWithLanguages
+      .filter((repo) => !repo.fork && !repo.archived)
+      .map((repo) => ({
         name: repo.name,
         description: repo.description || 'No description available',
-        stack: repo.topics || [],
+        stack: repo.languages || [],
         sourceCode: repo.html_url,
         livePreview: repo.homepage,
         stars: repo.stargazers_count,
@@ -54,7 +79,7 @@ const fetchGitHubRepos = async (username) => {
 
     return formattedRepos;
   } catch (error) {
-    console.error('Error fetching GitHub repositories:', error);
+    console.error('Error fetching GitHub data:', error);
     // Return cached data if available, otherwise empty array
     return cache.data || [];
   }
