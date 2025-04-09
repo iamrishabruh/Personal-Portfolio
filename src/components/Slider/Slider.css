@@ -16,8 +16,7 @@
 
 .slider__button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: -3rem;
   background: none;
   border: none;
   color: var(--clr-fg);
@@ -49,6 +48,10 @@
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slider__dot {
@@ -58,20 +61,27 @@
   background: var(--clr-fg);
   opacity: 0.3;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .slider__dot.active {
   opacity: 1;
+  background: var(--clr-primary);
+  transform: scale(1.2);
 }
 
 @media (max-width: 600px) {
   .slider__button {
     padding: 0.25rem;
+    bottom: -2.5rem;
   }
 
   .slider__button svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .slider__dots {
+    bottom: -1.5rem;
   }
 } 
