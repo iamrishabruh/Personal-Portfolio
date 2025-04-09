@@ -55,17 +55,6 @@
   right: 0;
   transform: translateY(-50%);
   z-index: 1000;
-  background: transparent;
-}
-
-.nav.scrolled {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-}
-
-.nav:hover {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
 }
 
 .nav__list {
@@ -74,7 +63,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav__list-item {
@@ -101,6 +90,7 @@
 .link--nav:hover {
   opacity: 1;
   transform: translateX(-5px);
+  color: var(--clr-primary);
 }
 
 @media (max-width: 768px) {
