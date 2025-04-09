@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import './Slider.css';
@@ -49,6 +49,7 @@ const Slider = ({ items, renderItem }) => {
   return (
     <div className="slider">
       <button 
+        type="button"
         className="slider__button slider__button--left"
         onClick={prevSlide}
         aria-label="Previous slide"
@@ -66,6 +67,7 @@ const Slider = ({ items, renderItem }) => {
       </div>
       
       <button 
+        type="button"
         className="slider__button slider__button--right"
         onClick={nextSlide}
         aria-label="Next slide"
@@ -74,9 +76,10 @@ const Slider = ({ items, renderItem }) => {
       </button>
       
       <div className="slider__dots">
-        {items.map((_, index) => (
+        {items.map((item, index) => (
           <button
-            key={index}
+            key={`dot-${item.name || index}`}
+            type="button"
             className={`slider__dot ${index === currentIndex ? 'slider__dot--active' : ''}`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Go to slide ${index + 1}`}

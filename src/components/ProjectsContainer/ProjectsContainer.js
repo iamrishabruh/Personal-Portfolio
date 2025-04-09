@@ -16,11 +16,11 @@ const ProjectsContainer = ({ project }) => {
 
       {hasMedia && (
         <div className='project__media'>
-          {project.images?.map((image, index) => (
+          {project.images?.map((image) => (
             <img 
-              key={index} 
+              key={`${project.name}-${uniqid()}`} 
               src={image} 
-              alt={`${project.name} screenshot ${index + 1}`}
+              alt={`${project.name} screenshot`}
               className='project__image'
             />
           ))}
