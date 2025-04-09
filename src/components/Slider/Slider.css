@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .slider__container {
@@ -17,7 +17,7 @@
 
 .slider__button {
   position: absolute;
-  bottom: -3rem;
+  bottom: 0;
   background: none;
   border: none;
   color: var(--clr-fg);
@@ -50,7 +50,7 @@
   gap: 0.5rem;
   margin-top: 1rem;
   position: absolute;
-  bottom: -2rem;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -74,7 +74,6 @@
 @media (max-width: 600px) {
   .slider__button {
     padding: 0.25rem;
-    bottom: -2.5rem;
   }
 
   .slider__button svg {
@@ -83,6 +82,6 @@
   }
 
   .slider__dots {
-    bottom: -1.5rem;
+    bottom: 1.5rem;
   }
 } 
