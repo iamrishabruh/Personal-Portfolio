@@ -65,7 +65,7 @@ const header = {
   }
   
   // List of key technical and soft skills.
-  export const skills = {
+  const skills = {
     frontend: [
       'React.js',
       'Next.js',
