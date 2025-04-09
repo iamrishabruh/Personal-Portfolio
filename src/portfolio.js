@@ -98,31 +98,31 @@ const header = {
   // Initialize projects
   updateProjects();
   
+  // Leadership experience, each entry includes a role, description, and related links.
+  const leaderships = [
+    {
+      name: 'Community Ambassador', 
+      description:
+        'I organized multiple three-day community events at locations like Patel Brothers and senior retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
+      stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], 
+      instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', 
+      livePreview: 'http://friends.careaccess.com/6DzP29', 
+    },
+    {
+      name: 'CSA Achievement Award', 
+      description:
+        'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', 
+      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], 
+      livePreview: 'https://georgiafbla.org/community-service-awards-csa/', 
+    },
+    {
+      name: 'Outlier AI University Coder Push', 
+      description:
+        'Organized and led a 2.5 day Outlier AI University Coders event, engaging students in interactive onboarding, live Q&A sessions, and team-based coding challenges. Delivered a prerecorded demo and provided hands-on guidance to ensure over 25 participants successfully completed the program. Demonstrated skills in technical communication, event management, and fostering a collaborative learning environment.', 
+      stack: ['Leadership', 'Generative AI', 'Organization', 'Communication'], 
+      livePreview: 'https://www.linkedin.com/feed/update/urn:li:activity:7263324912482758656/', 
+    },
+  ]
+  
   // Exporting all defined objects so they can be used in other parts of the codebase.
-  export { header, about, projects, skills, contact }
-
-// Leadership experience, each entry includes a role, description, and related links.
-const leaderships = [
-  {
-    name: 'Community Ambassador', 
-    description:
-      'I organized multiple three-day community events at locations like Patel Brothers and senior retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
-    stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], 
-    instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', 
-    livePreview: 'http://friends.careaccess.com/6DzP29', 
-  },
-  {
-    name: 'CSA Achievement Award', 
-    description:
-      'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', 
-    stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], 
-    livePreview: 'https://georgiafbla.org/community-service-awards-csa/', 
-  },
-  {
-    name: 'Outlier AI University Coder Push', 
-    description:
-      'Organized and led a 2.5 day Outlier AI University Coders event, engaging students in interactive onboarding, live Q&A sessions, and team-based coding challenges. Delivered a prerecorded demo and provided hands-on guidance to ensure over 25 participants successfully completed the program. Demonstrated skills in technical communication, event management, and fostering a collaborative learning environment.', 
-    stack: ['Leadership', 'Generative AI', 'Organization', 'Communication'], 
-    livePreview: 'https://www.linkedin.com/feed/update/urn:li:activity:7263324912482758656/', 
-  },
-]
+  export { header, about, projects, skills, contact, leaderships }
