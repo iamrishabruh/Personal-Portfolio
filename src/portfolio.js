@@ -12,12 +12,12 @@ const header = {
     role: 'Software Developer', 
     descriptions: [
       'Software Engineer',
-      'Lifelong curious learner',
+      'Curious learner',
       'Community leader',
       'Literacy advocate',
       'Active volunteer',
-      'Resilient innovator',
-      'Intellectual',
+      'Resilient entrepreneur',
+      'Open minded',
 
     ],
     resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing', // URL to resume.
