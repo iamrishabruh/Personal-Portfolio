@@ -1,4 +1,4 @@
-import uniqid from 'uniqid'
+import React from 'react'
 import { skills } from '../../portfolio'
 import './Skills.css'
 
@@ -9,9 +9,14 @@ const Skills = () => {
     <section className='section skills' id='skills'>
       <h2 className='section__title'>Skills</h2>
       <ul className='skills__list'>
-        {skills.map((skill) => (
-          <li key={uniqid()} className='skills__list-item btn btn--plain'>
-            {skill}
+        {Object.entries(skills).map(([category, items]) => (
+          <li key={category} className='skills__list-item btn btn--plain'>
+            <div className='skills__category'>{category}</div>
+            <div className='skills__items'>
+              {items.map((skill, index) => (
+                <span key={index} className='skills__item'>{skill}</span>
+              ))}
+            </div>
           </li>
         ))}
       </ul>
