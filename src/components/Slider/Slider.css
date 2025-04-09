@@ -2,10 +2,11 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding: 0 3rem;
 }
 
-.slider__container {
-  display: flex;
+.slider__content {
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
@@ -32,11 +33,11 @@
   opacity: 1;
 }
 
-.slider__button--prev {
+.slider__button--left {
   left: 0;
 }
 
-.slider__button--next {
+.slider__button--right {
   right: 0;
 }
 
@@ -60,15 +61,21 @@
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
+  padding: 0;
 }
 
-.slider__dot.active {
+.slider__dot--active {
   opacity: 1;
   background: var(--clr-primary);
   transform: scale(1.2);
 }
 
 @media (max-width: 600px) {
+  .slider {
+    padding: 0 2rem;
+  }
+
   .slider__button {
     padding: 0.25rem;
   }
