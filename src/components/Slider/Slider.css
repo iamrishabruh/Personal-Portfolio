@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding-bottom: 4rem;
 }
 
 .slider__container {
@@ -12,12 +11,13 @@
 
 .slider__item {
   min-width: 100%;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 .slider__button {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   color: var(--clr-fg);
@@ -49,10 +49,6 @@
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .slider__dot {
@@ -72,6 +68,10 @@
 }
 
 @media (max-width: 600px) {
+  .slider__item {
+    padding: 0 1rem;
+  }
+
   .slider__button {
     padding: 0.25rem;
   }
@@ -79,9 +79,5 @@
   .slider__button svg {
     width: 1.5rem;
     height: 1.5rem;
-  }
-
-  .slider__dots {
-    bottom: 1.5rem;
   }
 } 
