@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeContext } from './theme'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
@@ -16,33 +15,31 @@ const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
 
   return (
-    <Router>
-      <div id='top' className={`${themeName} app`}>
-        <Navbar />
-        <Header />
+    <div id='top' className={`${themeName} app`}>
+      <Navbar />
+      <Header />
 
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <About />
-                <Projects />
-                <Leaderships />
-                <Skills />
-                <Contact />
-              </>
-            } />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+      <main>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="leaderships">
+          <Leaderships />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
 
-        <Scroll />
-        <Footer />
-      </div>
-    </Router>
+      <Scroll />
+      <Footer />
+    </div>
   )
 }
 
