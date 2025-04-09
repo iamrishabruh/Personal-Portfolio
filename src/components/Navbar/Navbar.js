@@ -7,10 +7,9 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    const navbarHeight = 60;
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      const offsetPosition = elementPosition + window.pageYOffset - 150;
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
