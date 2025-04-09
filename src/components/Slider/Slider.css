@@ -2,11 +2,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 3rem;
 }
 
 .slider__content {
   width: 100%;
   transition: transform 0.5s ease;
+  padding: 1rem 0;
 }
 
 .slider__item {
@@ -16,7 +18,7 @@
 
 .slider__button {
   position: absolute;
-  bottom: -2rem;
+  bottom: -2.5rem;
   background: none;
   border: none;
   color: var(--clr-primary);
@@ -32,11 +34,13 @@
 }
 
 .slider__button--left {
-  left: 0;
+  left: 50%;
+  transform: translateX(-150%);
 }
 
 .slider__button--right {
-  right: 0;
+  right: 50%;
+  transform: translateX(150%);
 }
 
 .slider__button svg {
@@ -49,6 +53,10 @@
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slider__dot {
@@ -70,13 +78,21 @@
 }
 
 @media (max-width: 600px) {
+  .slider {
+    margin-bottom: 2.5rem;
+  }
+
   .slider__button {
     padding: 0.25rem;
-    bottom: -1.5rem;
+    bottom: -2rem;
   }
 
   .slider__button svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .slider__dots {
+    bottom: -3rem;
   }
 } 
