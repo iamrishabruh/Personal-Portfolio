@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 .slider__content {
@@ -34,11 +34,11 @@
 }
 
 .slider__button--left {
-  left: 0;
+  left: 0.5rem;
 }
 
 .slider__button--right {
-  right: 0;
+  right: 0.5rem;
 }
 
 .slider__button svg {
@@ -73,7 +73,7 @@
 
 @media (max-width: 600px) {
   .slider {
-    padding: 0 2rem;
+    padding: 0 0.5rem;
   }
 
   .slider__button {
