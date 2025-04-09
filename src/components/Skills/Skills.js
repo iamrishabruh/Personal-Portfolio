@@ -13,8 +13,8 @@ const Skills = () => {
           <li key={category} className='skills__list-item btn btn--plain'>
             <div className='skills__category'>{category}</div>
             <div className='skills__items'>
-              {items.map((skill, index) => (
-                <span key={index} className='skills__item'>{skill}</span>
+              {items.map((skill) => (
+                <span key={`${category}-${skill}`} className='skills__item'>{skill}</span>
               ))}
             </div>
           </li>
