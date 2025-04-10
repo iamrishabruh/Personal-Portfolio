@@ -1,109 +1,98 @@
-import uniqid from 'uniqid'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import LaunchIcon from '@material-ui/icons/Launch'
-import YouTubeIcon from '@material-ui/icons/YouTube'
-import StarIcon from '@material-ui/icons/Star'
-import ForkIcon from '@material-ui/icons/CallSplit'
-import CodeIcon from '@material-ui/icons/Code'
-import './ProjectsContainer.css'
+import React from 'react';
+import { projects } from '../../portfolio';
+import uniqid from 'uniqid';
+import './ProjectsContainer.css';
 
-const ProjectsContainer = ({ project }) => {
-  const hasMedia = project.images?.length > 0 || project.videoDemo || project.demo;
+const ProjectsContainer = () => {
+  if (!projects.length) return null;
 
   return (
-    <div className='project'>
-      <h3>{project.name}</h3>
-
-      {hasMedia && (
-        <div className='project__media'>
-          {project.images?.map((image) => (
-            <img 
-              key={`${project.name}-${uniqid()}`} 
-              src={image} 
-              alt={`${project.name} screenshot`}
-              className='project__image'
-            />
-          ))}
-          {project.videoDemo && (
-            <a
-              href={project.videoDemo}
-              aria-label='video demo'
-              className='link link--icon project__media-link'
-            >
-              <YouTubeIcon />
-              <span>Video Demo</span>
-            </a>
-          )}
-          {project.demo && (
-            <a
-              href={project.demo}
-              aria-label='live demo'
-              className='link link--icon project__media-link'
-            >
-              <LaunchIcon />
-              <span>Live Demo</span>
-            </a>
+    <div className='projects__grid'>
+      {projects.map((project) => (
+        <div key={uniqid()} className='project'>
+          <div className='project__meta'>
+            <div className='project__title'>{project.name}</div>
+            <div className='project__description'>{project.description}</div>
+            <div className='project__stack'>
+              {project.stack.map((item) => (
+                <span key={uniqid()} className='project__stack-item'>
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className='project__links'>
+              {project.sourceCode && (
+                <a
+                  href={project.sourceCode}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='link link--icon'
+                >
+                  <i className='fab fa-github'></i>
+                </a>
+              )}
+              {project.livePreview && (
+                <a
+                  href={project.livePreview}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='link link--icon'
+                >
+                  <i className='fas fa-external-link-alt'></i>
+                </a>
+              )}
+              {project.videoDemo && (
+                <a
+                  href={project.videoDemo}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='link link--icon'
+                >
+                  <i className='fas fa-video'></i>
+                </a>
+              )}
+            </div>
+            <div className='project__stats'>
+              {project.stars && (
+                <span className='project__stat'>
+                  <i className='fas fa-star'></i>
+                  {project.stars}
+                </span>
+              )}
+              {project.forks && (
+                <span className='project__stat'>
+                  <i className='fas fa-code-branch'></i>
+                  {project.forks}
+                </span>
+              )}
+            </div>
+          </div>
+          {project.media && (
+            <div className='project__media'>
+              {project.media.map((media) => (
+                <div key={uniqid()} className='project__media-item'>
+                  {media.type === 'image' && (
+                    <img
+                      src={media.url}
+                      alt={project.name}
+                      className='project__image'
+                    />
+                  )}
+                  {media.type === 'video' && (
+                    <video
+                      src={media.url}
+                      controls
+                      className='project__video'
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
           )}
         </div>
-      )}
-
-      <p className='project__description'>{project.description}</p>
-
-      <div className='project__stats'>
-        {project.stars !== undefined && (
-          <div className='project__stat'>
-            <StarIcon />
-            <span>{project.stars}</span>
-          </div>
-        )}
-        {project.forks !== undefined && (
-          <div className='project__stat'>
-            <ForkIcon />
-            <span>{project.forks}</span>
-          </div>
-        )}
-        {project.language && (
-          <div className='project__stat'>
-            <CodeIcon />
-            <span>{project.language}</span>
-          </div>
-        )}
-      </div>
-
-      {project.stack && (
-        <ul className='project__stack'>
-          {project.stack.map((item) => (
-            <li key={uniqid()} className='project__stack-item'>
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <div className='project__links'>
-        {project.sourceCode && (
-          <a
-            href={project.sourceCode}
-            aria-label='source code'
-            className='link link--icon'
-          >
-            <GitHubIcon />
-            <span>Source Code</span>
-          </a>
-        )}
-        {project.livePreview && (
-          <a
-            href={project.livePreview}
-            aria-label='live preview'
-            className='link link--icon'
-          >
-            <LaunchIcon />
-            <span>Live Preview</span>
-          </a>
-        )}
-      </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsContainer
+export default ProjectsContainer;
