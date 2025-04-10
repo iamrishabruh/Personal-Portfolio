@@ -1,7 +1,9 @@
 import React from 'react';
-import { projects } from '../../portfolio';
 import uniqid from 'uniqid';
+import { projects } from '../../portfolio';
 import './ProjectsContainer.css';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { BsStarFill, BsGit } from 'react-icons/bs';
 
 const ProjectsContainer = () => {
   if (!projects.length) return null;
