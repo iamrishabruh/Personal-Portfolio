@@ -36,7 +36,7 @@ const Home = () => {
       <div className='home__container'>
         <h1 className='home__title'>
           <span className='home__typing'>{text}</span>
-          {!isTyping && <span className='home__cursor'>|</span>}
+          {isTyping && <span className='home__cursor'>|</span>}
         </h1>
         <p className='home__subtitle'>Full Stack Developer</p>
       </div>
