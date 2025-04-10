@@ -19,6 +19,7 @@ const ProjectsContainer = () => {
   return (
     <div className='projects__container'>
       <button 
+        type="button"
         className='project__nav project__nav--prev'
         onClick={prevProject}
         aria-label='Previous project'
@@ -121,6 +122,7 @@ const ProjectsContainer = () => {
       </div>
 
       <button 
+        type="button"
         className='project__nav project__nav--next'
         onClick={nextProject}
         aria-label='Next project'
