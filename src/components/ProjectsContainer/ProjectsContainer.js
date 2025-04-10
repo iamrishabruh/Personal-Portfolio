@@ -1,6 +1,7 @@
 import React from 'react';
 import uniqid from 'uniqid';
-import { GitHubIcon, LaunchIcon } from '@material-ui/icons';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LaunchIcon from '@material-ui/icons/Launch';
 import './ProjectsContainer.css';
 
 const ProjectsContainer = ({ project }) => (
@@ -45,9 +46,9 @@ const ProjectsContainer = ({ project }) => (
         <a
           href={project.videoDemo}
           target='_blank'
-          rel='noopener noreferrer'
+          rel='noreferrer'
           className='link link--icon'
-          aria-label='View video demo'
+          aria-label='video demo'
         >
           <i className='fas fa-video' />
         </a>
