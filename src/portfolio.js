@@ -5,18 +5,18 @@ const about = {
   name: 'Rishabh Chouhan', 
   role: 'Software Developer', 
   descriptions: [
-    'Software Engineer',
-    'Passionate learner',
-    'Community leader',
-    'Literacy advocate',
-    'Active volunteer',
-    'Resilient entrepreneur',
-    'Open minded',
+    'Software Engineer.',
+    'Passionate learner.',
+    'Community leader.',
+    'Literacy advocate.',
+    'Active volunteer.',
+    'Resilient entrepreneur.',
+    'Open minded.',
   ],
   resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/chouhanrishabh/', 
-    github: 'https://github.com/iamrishabruh', 
+    github: 'https://www.github.com/iamrishabruh', 
   },
 }
 
