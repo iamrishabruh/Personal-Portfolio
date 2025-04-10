@@ -1,7 +1,5 @@
 import React from 'react';
 import uniqid from 'uniqid';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { BsStarFill, BsGit } from 'react-icons/bs';
 import { projects } from '../../portfolio';
 import './ProjectsContainer.css';
 
@@ -29,9 +27,8 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
-                  aria-label='View source code'
                 >
-                  <FaGithub />
+                  <i className='fab fa-github'></i>
                 </a>
               )}
               {project.livePreview && (
@@ -40,9 +37,8 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
-                  aria-label='View live preview'
                 >
-                  <FaExternalLinkAlt />
+                  <i className='fas fa-external-link-alt'></i>
                 </a>
               )}
               {project.videoDemo && (
@@ -51,22 +47,21 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
-                  aria-label='View video demo'
                 >
-                  <FaExternalLinkAlt />
+                  <i className='fas fa-video'></i>
                 </a>
               )}
             </div>
             <div className='project__stats'>
               {project.stars && (
-                <span className='project__stat' aria-label={`${project.stars} stars`}>
-                  <BsStarFill />
+                <span className='project__stat'>
+                  <i className='fas fa-star'></i>
                   {project.stars}
                 </span>
               )}
               {project.forks && (
-                <span className='project__stat' aria-label={`${project.forks} forks`}>
-                  <BsGit />
+                <span className='project__stat'>
+                  <i className='fas fa-code-branch'></i>
                   {project.forks}
                 </span>
               )}
@@ -88,9 +83,7 @@ const ProjectsContainer = () => {
                       src={media.url}
                       controls
                       className='project__video'
-                    >
-                      <track kind="captions" src="" label="English" />
-                    </video>
+                    />
                   )}
                 </div>
               ))}
