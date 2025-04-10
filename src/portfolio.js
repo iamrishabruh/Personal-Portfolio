@@ -112,7 +112,6 @@ const leaderships = [
     description:
       'I organized multiple three-day community events at locations like Patel Brothers, NAACP, Northside Hospital, and senior retirement homes, significantly boosting South Asian & African American participation in Lp(a) pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged 1000+ people in vital health initiatives.',
     stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'],
-    instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/',
     livePreview: 'http://friends.careaccess.com/6DzP29',
   },
   {
