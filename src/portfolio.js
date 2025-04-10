@@ -136,21 +136,21 @@ const leaderships = [
   {
     name: 'AI Fintech Club (AIFTC) - GSU',
     description:
-      'Founded Georgia State University's first AI-finance club. Secured sponsorships (e.g., Perplexity), hosted industry guest events, and grew the community to 50+ active members in a single semester.',
+      "Founded Georgia State University's first AI-finance club. Secured sponsorships (e.g., Perplexity), hosted industry guest events, and grew the community to 50+ active members in a single semester.",
     stack: ['Leadership', 'Finance', 'AI Education', '2025 – Present'],
     livePreview: 'https://pin.gsu.edu/organization/gsuaiftc/',
   },
   {
     name: 'Perplexity Campus Strategist & AI Business Fellow',
     description:
-      'Led strategic student engagement as Georgia's State Lead. Drove 500+ student sign-ups, facilitated growth partnerships impacting 50,000+ students, and collaborated with HQ to execute campus-level activations.',
+      "Led strategic student engagement as Georgia's State Lead. Drove 500+ student sign-ups, facilitated growth partnerships impacting 50,000+ students, and collaborated with HQ to execute campus-level activations.",
     stack: ['Growth Strategy', 'Leadership', 'Community Engagement', '2025 – Present'],
     livePreview: 'https://www.perplexity.ai/',
   },
   {
     name: 'Finance & Investment Club - SFHS',
     description:
-      'Founded and scaled a 100+ member finance and investment club in high school. Led workshops, organized student panels, and implemented community-focused financial literacy initiatives.',
+      "Founded and scaled a 100+ member finance and investment club in high school. Led workshops, organized student panels, and implemented community-focused financial literacy initiatives.",
     stack: ['Finance', 'Leadership', 'Workshop Facilitation', '2020 – 2022'],
     livePreview: 'https://linktr.ee/sfhsfinance/',
   }
