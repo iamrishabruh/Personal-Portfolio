@@ -1,7 +1,6 @@
 import React from 'react';
 import uniqid from 'uniqid';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LaunchIcon from '@material-ui/icons/Launch';
+import { GitHubIcon, LaunchIcon } from '@material-ui/icons';
 import './ProjectsContainer.css';
 
 const ProjectsContainer = ({ project }) => (
@@ -24,9 +23,9 @@ const ProjectsContainer = ({ project }) => (
         <a
           href={project.sourceCode}
           target='_blank'
-          rel='noopener noreferrer'
+          rel='noreferrer'
           className='link link--icon'
-          aria-label='View source code on GitHub'
+          aria-label='source code'
         >
           <GitHubIcon />
         </a>
@@ -35,9 +34,9 @@ const ProjectsContainer = ({ project }) => (
         <a
           href={project.livePreview}
           target='_blank'
-          rel='noopener noreferrer'
+          rel='noreferrer'
           className='link link--icon'
-          aria-label='View live preview'
+          aria-label='live preview'
         >
           <LaunchIcon />
         </a>
@@ -56,18 +55,14 @@ const ProjectsContainer = ({ project }) => (
     </div>
 
     <div className='project__stats'>
-      {project.stars && (
-        <span className='project__stat' aria-label={`${project.stars} stars`}>
-          <i className='fas fa-star' />
-          {project.stars}
-        </span>
-      )}
-      {project.forks && (
-        <span className='project__stat' aria-label={`${project.forks} forks`}>
-          <i className='fas fa-code-branch' />
-          {project.forks}
-        </span>
-      )}
+      <div className='project__stat'>
+        <i className='fas fa-star' />
+        <span>{project.stars}</span>
+      </div>
+      <div className='project__stat'>
+        <i className='fas fa-code-branch' />
+        <span>{project.forks}</span>
+      </div>
     </div>
 
     {project.media && (
