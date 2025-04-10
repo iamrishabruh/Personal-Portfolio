@@ -7,7 +7,7 @@ const Navbar = () => {
     if (element) {
       const navbarHeight = window.innerWidth <= 600 ? 50 : 60;
       const elementPosition = element.offsetTop;
-      const extraOffset = sectionId === 'projects' ? 100 : 0;
+      const extraOffset = ['projects', 'leaderships', 'skills'].includes(sectionId) ? 100 : 0;
       const offsetPosition = elementPosition - navbarHeight + extraOffset;
 
       window.scrollTo({
