@@ -29,7 +29,7 @@
 }
 
 .project__title {
-  color: var(--clr-primary);
+  color: var(--clr-fg);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -96,6 +96,7 @@
 
 .project__stat i {
   color: var(--clr-primary);
+  font-size: 1rem;
 }
 
 .project__media {
