@@ -33,18 +33,9 @@ export const updateProjects = async () => {
         name: 'AI Chatbot SaaS',
         description:
           'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.', // Brief description of the project and impact.
-          stack: ['Node.js', 'TypeScript', 'Docker', 'TensorFlow'], 
-          videoDemo: 'https://www.youtube.com/watch?v=0WnG67pE9GE', 
+          stack: ['Node.js', 'React', 'Docker', 'TensorFlow'], 
+          videoDemo: 'https://vimeo.com/1073437538', 
           livePreview: 'https://reachmindllc.com', 
-        },
-        {
-          name: 'Drug Interaction Checker',
-          description:
-            'Integrated the NIH Drug Interaction API into the flagship Kaiser Permanente iOS app, providing real-time drug interaction insights for 9 million daily users. Developed a proof-of-concept UI/UX using Swift and Xcode, adhering to Kaisers CSS guidelines for a seamless experience.', // Brief description of the project and impact.
-          stack: ['Swift', 'RESTful API', 'Xcode', 'XCTest'], 
-          videoDemo: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', 
-          sourceCode: 'https://github.com/iamrishabruh/drug_interaction_checker', 
-          livePreview: 'https://drive.google.com/file/d/1JxK2rb48zOS-sHqvnYMG1pluhMhzchWg/view', 
         },
         // Add GitHub projects
         ...githubProjects,
@@ -118,28 +109,50 @@ export const updateProjects = async () => {
   // Leadership experience, each entry includes a role, description, and related links.
   const leaderships = [
     {
-      name: 'Community Ambassador', 
+      name: 'Community Ambassador',
       description:
-        'I organized multiple three-day community events at locations like Patel Brothers and senior retirement homes, significantly boosting South Asian participation in health pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged the public in vital health initiatives.', // Brief description of leadership experience and impact.
-      stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'], 
-      instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/', 
-      livePreview: 'http://friends.careaccess.com/6DzP29', 
+        'I organized multiple three-day community events at locations like Patel Brothers, NAACP, Northside Hospital, and senior retirement homes, significantly boosting South Asian & African American participation in Lp(a) pre-screenings. Through effective outreach campaigns and health fairs, I raised awareness about clinical trial opportunities and engaged 1000+ people in vital health initiatives.',
+      stack: ['Community Outreach', 'Public Speaking', 'Project Coordination', '2023 - Present'],
+      instaDemo: 'https://www.instagram.com/stories/highlights/17855570211205717/',
+      livePreview: 'http://friends.careaccess.com/6DzP29',
     },
     {
-      name: 'CSA Achievement Award', 
+      name: 'CSA Achievement Award',
       description:
-        'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.', 
-      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'], 
-      livePreview: 'https://georgiafbla.org/community-service-awards-csa/', 
+        'National recognition by Future Business Leaders of America for completing over 500 hours of community service during four years as an FBLA member.',
+      stack: ['Volunteer', 'MealsByGrace', 'SEWA International', 'Shelters'],
+      livePreview: 'https://georgiafbla.org/community-service-awards-csa/',
     },
     {
-      name: 'Outlier AI University Coder Push', 
+      name: 'Outlier AI University Coder Push',
       description:
-        'Organized and led a 2.5 day Outlier AI University Coders event, engaging students in interactive onboarding, live Q&A sessions, and team-based coding challenges. Delivered a prerecorded demo and provided hands-on guidance to ensure over 25 participants successfully completed the program. Demonstrated skills in technical communication, event management, and fostering a collaborative learning environment.', 
-      stack: ['Leadership', 'Generative AI', 'Organization', 'Communication'], 
-      livePreview: 'https://www.linkedin.com/feed/update/urn:li:activity:7263324912482758656/', 
+        'Organized and led a 2 1/2 day Outlier AI University Coders event, engaging students in interactive onboarding, live Q&A sessions, and team-based coding challenges. Delivered a prerecorded demo and provided hands-on guidance to ensure over 45 participants successfully completed the program. Demonstrated skills in technical communication, event management, and fostering a collaborative learning environment.',
+      stack: ['Leadership', 'Generative AI', 'Organization', 'Communication'],
+      livePreview: 'https://outlier.ai/',
     },
+    {
+      name: 'AI Fintech Club (AIFTC) - GSU',
+      description:
+        'Founded Georgia State University’s first AI-finance club. Secured sponsorships (e.g., Perplexity), hosted industry guest events, and grew the community to 50+ active members in a single semester.',
+      stack: ['Leadership', 'Finance', 'AI Education', '2025 – Present'],
+      livePreview: 'https://pin.gsu.edu/organization/gsuaiftc/',
+    },
+    {
+      name: 'Perplexity Campus Strategist & AI Business Fellow',
+      description:
+        'Led strategic student engagement as Georgia’s State Lead. Drove 500+ student sign-ups, facilitated growth partnerships impacting 50,000+ students, and collaborated with HQ to execute campus-level activations.',
+      stack: ['Growth Strategy', 'Leadership', 'Community Engagement', '2025 – Present'],
+      livePreview: 'https://www.perplexity.ai/',
+    },
+    {
+      name: 'Finance & Investment Club - SFHS',
+      description:
+        'Founded and scaled a 100+ member finance and investment club in high school. Led workshops, organized student panels, and implemented community-focused financial literacy initiatives.',
+      stack: ['Finance', 'Leadership', 'Workshop Facilitation', '2020 – 2022'],
+      livePreview: 'https://linktr.ee/sfhsfinance/',
+    }
   ]
+  
   
   // Exporting all defined objects so they can be used in other parts of the codebase.
   export { about, projects, skills, contact, leaderships }
