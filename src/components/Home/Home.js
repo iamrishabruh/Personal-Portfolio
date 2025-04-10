@@ -16,14 +16,16 @@ const Home = () => {
         if (currentIndex < fullText.length) {
           setText(fullText.slice(0, currentIndex + 1));
           currentIndex++;
-          timeout = setTimeout(type, 100);
+          // Add a slight random delay to make typing more natural
+          const delay = Math.random() * 100 + 150; // Random delay between 150-250ms
+          timeout = setTimeout(type, delay);
         } else {
           setIsTyping(false);
         }
       };
 
       type();
-    }, 1500); // 1.5 second delay before starting
+    }, 2000); // 2 second delay before starting
 
     return () => {
       clearTimeout(timeout);
