@@ -37,14 +37,34 @@
     color: var(--clr-fg-alt);
   }
   
+  .leadership__links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin: 1.5em 0;
+  }
+  
   .leadership .link--icon {
-    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background: var(--clr-bg);
     color: var(--clr-primary);
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
   }
   
   .leadership .link--icon:hover {
-    transform: scale(1.2);
+    transform: translateY(-3px);
+    background: var(--clr-primary);
+    color: var(--clr-bg);
+  }
+  
+  .leadership .link--icon svg,
+  .leadership .link--icon i {
+    font-size: 1.2em;
   }
   
   /* Mobile responsiveness */
