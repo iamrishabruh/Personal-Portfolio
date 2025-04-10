@@ -35,7 +35,6 @@ export const updateProjects = async () => {
           'Designed customizable AI chatbots using TypeScript, HTML/CSS, and OpenAI API, automating 75% of customer inquiries. Enhanced client acquisition through data scraping (Python) and scalable email automation (Node.js, Docker), boosting response rates with personalized email content and engagement analytics using TensorFlow.',
         stack: ['Node.js', 'React', 'Docker', 'TensorFlow'],
         videoDemo: 'https://vimeo.com/1073437538',
-        livePreview: 'https://reachmindllc.com',
       },
       // Add GitHub projects
       ...githubProjects,

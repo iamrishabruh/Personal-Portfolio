@@ -27,8 +27,9 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
+                  aria-label='View source code on GitHub'
                 >
-                  <i className='fab fa-github'></i>
+                  <i className='fab fa-github' />
                 </a>
               )}
               {project.livePreview && (
@@ -37,8 +38,9 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
+                  aria-label='View live preview'
                 >
-                  <i className='fas fa-external-link-alt'></i>
+                  <i className='fas fa-external-link-alt' />
                 </a>
               )}
               {project.videoDemo && (
@@ -47,21 +49,22 @@ const ProjectsContainer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                   className='link link--icon'
+                  aria-label='View video demo'
                 >
-                  <i className='fas fa-video'></i>
+                  <i className='fas fa-video' />
                 </a>
               )}
             </div>
             <div className='project__stats'>
               {project.stars && (
-                <span className='project__stat'>
-                  <i className='fas fa-star'></i>
+                <span className='project__stat' aria-label={`${project.stars} stars`}>
+                  <i className='fas fa-star' />
                   {project.stars}
                 </span>
               )}
               {project.forks && (
-                <span className='project__stat'>
-                  <i className='fas fa-code-branch'></i>
+                <span className='project__stat' aria-label={`${project.forks} forks`}>
+                  <i className='fas fa-code-branch' />
                   {project.forks}
                 </span>
               )}
@@ -83,7 +86,9 @@ const ProjectsContainer = () => {
                       src={media.url}
                       controls
                       className='project__video'
-                    />
+                    >
+                      <track kind="captions" src="" label="English" />
+                    </video>
                   )}
                 </div>
               ))}
