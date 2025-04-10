@@ -37,11 +37,8 @@ export const updateProjects = async () => {
         videoDemo: 'https://vimeo.com/1073437538',
         livePreview: 'https://reachmindllc.com',
       },
-      // Add GitHub projects without language
-      ...githubProjects.map(project => ({
-        ...project,
-        language: undefined, // Remove the language property
-      })),
+      // Add GitHub projects
+      ...githubProjects,
     ];
     // Update the projects array by pushing new items
     projects.length = 0; // Clear the array
