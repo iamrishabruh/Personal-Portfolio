@@ -10,6 +10,7 @@ const about = {
     'Community leader.',
     'Literacy advocate.',
     'Active volunteer.',
+    'Type 1 Diabetic.',
     'Resilient entrepreneur.',
     'Open minded.',
   ],
