@@ -7,7 +7,8 @@ const Navbar = () => {
     if (element) {
       const navbarHeight = window.innerWidth <= 600 ? 50 : 60;
       const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - navbarHeight + 20;
+      const extraOffset = sectionId === 'projects' ? 100 : 0;
+      const offsetPosition = elementPosition - navbarHeight + extraOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -25,7 +26,8 @@ const Navbar = () => {
             onClick={() => scrollToSection('about')}
             className='link link--nav'
           >
-            About
+            <span className="desktop-only">About</span>
+            <span className="mobile-only">👤</span>
           </button>
         </li>
         <li className='nav__list-item'>
@@ -34,7 +36,8 @@ const Navbar = () => {
             onClick={() => scrollToSection('projects')}
             className='link link--nav'
           >
-            Projects
+            <span className="desktop-only">Projects</span>
+            <span className="mobile-only">💻</span>
           </button>
         </li>
         <li className='nav__list-item'>
@@ -43,7 +46,8 @@ const Navbar = () => {
             onClick={() => scrollToSection('leaderships')}
             className='link link--nav'
           >
-            Leadership
+            <span className="desktop-only">Leadership</span>
+            <span className="mobile-only">👥</span>
           </button>
         </li>
         <li className='nav__list-item'>
@@ -52,7 +56,8 @@ const Navbar = () => {
             onClick={() => scrollToSection('skills')}
             className='link link--nav'
           >
-            Skills
+            <span className="desktop-only">Skills</span>
+            <span className="mobile-only">⚡</span>
           </button>
         </li>
         <li className='nav__list-item'>
@@ -61,7 +66,8 @@ const Navbar = () => {
             onClick={() => scrollToSection('contact')}
             className='link link--nav'
           >
-            Contact
+            <span className="desktop-only">Contact</span>
+            <span className="mobile-only">📧</span>
           </button>
         </li>
       </ul>

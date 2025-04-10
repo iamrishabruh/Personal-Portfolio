@@ -6,12 +6,12 @@ const about = {
   role: 'Software Developer', 
   descriptions: [
     'Software Engineer',
-    'Lifelong curious learner',
+    'Passionate learner',
     'Community leader',
     'Literacy advocate',
     'Active volunteer',
-    'Resilient innovator',
-    'Intellectual',
+    'Resilient entrepreneur',
+    'Open minded',
   ],
   resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing',
   social: {
