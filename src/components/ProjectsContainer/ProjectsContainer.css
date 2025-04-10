@@ -52,7 +52,7 @@
 
 .project__stack-item {
   background: var(--clr-bg);
-  color: var(--clr-primary);
+  color: var(--clr-fg);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -62,21 +62,31 @@
 .project__links {
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 1.5em;
   margin: 1.5em 0;
 }
 
 .project .link--icon {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background: var(--clr-bg);
   color: var(--clr-primary);
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .project .link--icon:hover {
   transform: translateY(-3px);
-  color: var(--clr-primary);
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+.project .link--icon svg,
+.project .link--icon i {
+  font-size: 1.2em;
 }
 
 .project__stats {
