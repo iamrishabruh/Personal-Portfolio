@@ -5,14 +5,13 @@ const about = {
   name: 'Rishabh Chouhan', 
   role: 'Software Developer', 
   descriptions: [
-    'Software Engineer.',
-    'Passionate learner.',
-    'Community leader.',
+    'Open minded.',
+    'Challenge-driven.',
+    'Resilient.',
     'Literacy advocate.',
     'Active volunteer.',
     'Type 1 Diabetic.',
-    'Resilient entrepreneur.',
-    'Open minded.',
+    'Entrepreneur.',
   ],
   resume: 'https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?usp=sharing',
   social: {
