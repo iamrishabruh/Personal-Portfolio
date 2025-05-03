@@ -162,6 +162,8 @@
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  z-index: 2;
+  position: relative;
 }
 
 .project-link {
@@ -176,16 +178,20 @@
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.2s ease;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .project-link:hover {
   background: #dbeafe;
   transform: translateY(-1px);
+  color: #2563eb;
 }
 
 .project-link svg {
   width: 1rem;
   height: 1rem;
+  pointer-events: none;
 }
 
 .loading {
