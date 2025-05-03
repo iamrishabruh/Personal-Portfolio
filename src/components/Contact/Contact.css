@@ -1,17 +1,139 @@
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    padding: 35px 0; 
+.contact-section {
+  padding: 1rem 0;
+  background: var(--clr-bg);
 }
-  
-  .contact .btn {
-    padding: 24px 46px; 
-    margin: 15px 0; 
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
-  
-  .section__title {
-    margin-bottom: 100px; 
+
+.contact-content {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 0.75rem;
+}
+
+.contact-description {
+  font-size: 0.9rem;
+  color: var(--clr-fg-alt);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--clr-primary);
+  color: white;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.email-button:hover {
+  background: var(--clr-bg-alt);
+  transform: translateY(-2px);
+}
+
+.email-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.email-button:hover .email-hover-text {
+  opacity: 1;
+}
+
+.email-button:hover .email-content {
+  opacity: 0.7;
+}
+
+.email-button svg {
+  font-size: 1.1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--clr-bg-alt);
+  color: var(--clr-fg);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--clr-primary);
+  color: white;
+}
+
+.social-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--clr-bg-alt);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 0.85rem;
+  }
+
+  .email-button {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
 }

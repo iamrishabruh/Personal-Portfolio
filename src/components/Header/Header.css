@@ -1,10 +1,11 @@
 .header {
     height: 60px;
-    max-width: 1100px;
+    max-width: 900px;
     width: 95%;
     margin: 0 auto;
     justify-content: center;
     position: relative; /* Required for absolute positioning of dropdown */
+    padding: 0 2rem;
   }
   
   @media (max-width: 600px) {

@@ -1,31 +1,232 @@
-.projects__grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    grid-gap: 2em;
-  }
+.projects-section {
+  padding: 1.5rem 0;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
 
-.projects {
+.dark .projects-section {
+  background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+}
+
+.projects-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.projects-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.dark .projects-title {
+  color: #ffffff;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: var(--clr-bg);
+  border-radius: 0;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--clr-bg-alt);
   position: relative;
+  overflow: hidden;
+}
+
+.dark .project-card {
+  background: #2d2d2d;
+  border-color: #404040;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--clr-primary);
+}
+
+.project-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.dark .project-card:hover::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark .project-hover-text {
+  color: var(--clr-fg);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.project-card:hover .project-hover-text {
+  opacity: 1;
+}
+
+.project-card:hover .project-content {
+  opacity: 0.7;
+}
+
+.project-date-location {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--clr-fg-alt);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-date-location {
+  opacity: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.dark .project-title {
+  color: #ffffff;
+}
+
+.project-description {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.dark .project-description {
+  color: #9ca3af;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #3b82f6;
+  background: #eff6ff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.project-link svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .loading {
   text-align: center;
-  color: var(--clr-fg);
-  font-size: 1.2em;
-  padding: 2em;
-  animation: pulse 1.5s infinite;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 1rem;
 }
 
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 1rem 0;
   }
-  50% {
-    opacity: 1;
+
+  .projects-container {
+    padding: 0 0.75rem;
   }
-  100% {
-    opacity: 0.6;
+
+  .projects-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .projects-grid {
+    gap: 0.75rem;
+  }
+
+  .project-card {
+    padding: 0.75rem;
+  }
+
+  .project-title {
+    font-size: 0.95rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.35rem;
   }
 }
