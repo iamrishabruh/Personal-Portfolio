@@ -1,13 +1,12 @@
 .contact {
+  min-height: 100vh;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: var(--clr-bg);
   color: var(--clr-fg);
-  position: relative;
-  height: auto;
-  min-height: auto;
 }
 
 .contact__container {
@@ -17,20 +16,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  position: relative;
+  gap: 2rem;
 }
 
 .contact__header {
   text-align: center;
-  margin-bottom: 0.5rem;
-  position: relative;
+  margin-bottom: 1rem;
 }
 
 .contact__title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: var(--clr-primary);
 }
 
@@ -44,9 +41,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
-  position: relative;
 }
 
 .contact__form {
@@ -54,15 +50,13 @@
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  position: relative;
+  gap: 1rem;
 }
 
 .contact__input-group {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  position: relative;
+  gap: 0.5rem;
 }
 
 .contact__label {
@@ -79,8 +73,6 @@
   color: var(--clr-fg);
   font-size: 1rem;
   transition: all 0.3s ease;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .contact__input:focus,
@@ -91,10 +83,8 @@
 }
 
 .contact__textarea {
-  height: 120px;
+  min-height: 150px;
   resize: vertical;
-  min-height: 120px;
-  max-height: 200px;
 }
 
 .contact__submit {
@@ -108,7 +98,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
-  width: auto;
 }
 
 .contact__submit:hover {
@@ -124,9 +113,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  position: relative;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contact__social-links {
@@ -146,11 +134,10 @@
 }
 
 .contact__copyright {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-size: 0.9rem;
   color: var(--clr-fg);
   opacity: 0.7;
-  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -167,15 +154,14 @@
   }
 
   .contact__content {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .contact__form {
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
   .contact__textarea {
-    height: 100px;
-    min-height: 100px;
+    min-height: 120px;
   }
 }
