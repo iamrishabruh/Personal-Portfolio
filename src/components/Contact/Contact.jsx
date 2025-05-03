@@ -1,98 +1,65 @@
-import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaTwitter, FaInstagram, FaFacebook, FaReddit, FaTiktok, FaSoundcloud } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:rchouhan.network@gmail.com';
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log(formData);
-  };
+  const socialLinks = [
+    { icon: FaTwitter, url: 'https://x.com/rishabruh', label: 'Twitter' },
+    { icon: FaInstagram, url: 'https://www.instagram.com/rishabruh/', label: 'Instagram' },
+    { icon: FaFacebook, url: 'https://www.facebook.com/profile.php?id=100012571633391', label: 'Facebook' },
+    { icon: FaReddit, url: 'https://www.reddit.com/user/Rishabruh/', label: 'Reddit' },
+    { icon: FaTiktok, url: 'https://www.tiktok.com/@rishabruh', label: 'TikTok' },
+    { icon: FaSoundcloud, url: 'https://soundcloud.com/user-327272861', label: 'SoundCloud' },
+  ];
 
   return (
-    <section id="contact" className="contact">
-      <div className="contact__container">
-        <div className="contact__header">
-          <h2 className="contact__title">Get in Touch</h2>
-          <p className="contact__subtitle">Let's work together!</p>
-        </div>
+    <section id="contact" className="contact-section">
+      <div className="contact-container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="contact-content"
+        >
+          <h2 className="section-title">Get in Touch</h2>
+          <p className="contact-description">
+            Feel free to reach out to me via email. I'm always open to discussing new projects, 
+            creative ideas, or opportunities to be part of your visions.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="email-button"
+            onClick={handleEmailClick}
+          >
+            <FaEnvelope />
+            <span>rchouhan.network@gmail.com</span>
+          </motion.button>
 
-        <div className="contact__content">
-          <form className="contact__form" onSubmit={handleSubmit}>
-            <div className="contact__input-group">
-              <label htmlFor="name" className="contact__label">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="contact__input"
-                required
-              />
-            </div>
-
-            <div className="contact__input-group">
-              <label htmlFor="email" className="contact__label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="contact__input"
-                required
-              />
-            </div>
-
-            <div className="contact__input-group">
-              <label htmlFor="message" className="contact__label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="contact__textarea"
-                required
-              />
-            </div>
-
-            <button type="submit" className="contact__submit">
-              Send Message
-            </button>
-          </form>
-
-          <div className="contact__social">
-            <div className="contact__social-links">
-              <a href="https://github.com/rishabhchouhan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/rishabhchouhan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
-                <FaLinkedin />
-              </a>
-              <a href="https://twitter.com/rishabhchouhan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
-                <FaTwitter />
-              </a>
-              <a href="mailto:rishabhchouhan@example.com" className="contact__social-link">
-                <FaEnvelope />
-              </a>
-            </div>
-            <p className="contact__copyright">Rishabh Chouhan © 2025</p>
+          <div className="social-links">
+            {socialLinks.map((social) => (
+              <motion.a
+                key={social.label}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                whileHover={{ scale: 1.1, y: -3 }}
+                transition={{ duration: 0.3 }}
+                aria-label={social.label}
+              >
+                <social.icon />
+              </motion.a>
+            ))}
           </div>
+        </motion.div>
+        <div className="copyright">
+          © Rishabh Chouhan 2025
         </div>
       </div>
     </section>
