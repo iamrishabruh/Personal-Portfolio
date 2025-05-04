@@ -80,11 +80,21 @@ const Hero = () => {
         <div className="hero__main-content">
           <div className="hero__intro">
             <p className="hero__description">
-              At South Forsyth High School, I pushed myself to graduate in the top 2% of my class all while learning to manage Type 1 Diabetes, diagnosed in February 2012. Mastering the art of precise measurements and relentless routines didn't just keep me healthy; it taught me the power of grit, adaptability, and planning under pressure. Those lessons carried me through a BS in Computer Science at GSU and now drive my work toward an MS at Georgia Tech.
+              Born in India and raised in Atlanta for 2 decades. 
               <br /><br />
-              Seeing my immigrant parents stretch every dollar to keep our family afloat sparked my obsession with financial education. I founded the SFHS Finance & Investment Club, then the GSU AI FinTech Club, to demystify budgeting, investing, and wealth-building for over hundreds of peers—because real freedom comes from knowing how to make smart money decisions, not just chasing the next dollar. 
+              Diagnosed with Type 1 Diabetes in 2012. 
               <br /><br />
-              Today, I channel that same energy into solutions that aim to simplify healthcare, finance, and technology for everyone.
+              I've always been driven by curiosity and a passion for learning. 
+              <br /><br />
+              To explore the "big three," I spent freshman year at UGA, completed my Bachelors at GSU in Computer Science, and now pursue my Masters in Computer Science at Georgia Tech. 
+              <br /><br />
+              The final goal in my education is a Doctor of Philosophy in Computer Science from UC Berkeley.
+              <br /><br />
+              Currently, I'm building <a href="https://reachmind.com" target="_blank" rel="noopener noreferrer" className="company-link">Reachmind</a>, a streamlined HR immigration workflow platform, and looking for beta users. I also work at <a href="https://careaccess.com" target="_blank" rel="noopener noreferrer" className="company-link">Care Access</a>, organizing community health initiatives for Lp(a) and pTau trials. I've worked as a Founding Engineer at <a href="https://skincentric.com" target="_blank" rel="noopener noreferrer" className="company-link">Skincentric</a>, a VC-backed personalized skincare platform. I was selected for <a href="https://perplexity.ai" target="_blank" rel="noopener noreferrer" className="company-link">Perplexity's</a> AI Business Fellowship and Campus Strategist program to connect, learn, drive growth, and sharpen strategy.
+              <br /><br />
+              Previously worked at <a href="https://www.kaiserpermanente.org" target="_blank" rel="noopener noreferrer" className="company-link">Kaiser Permanente</a>, <a href="https://outlier.ai" target="_blank" rel="noopener noreferrer" className="company-link">Outlier AI</a>, <a href="https://www.walmart.com" target="_blank" rel="noopener noreferrer" className="company-link">Walmart</a>, <a href="https://www.starbucks.com" target="_blank" rel="noopener noreferrer" className="company-link">Starbucks</a>, and <a href="https://www.kumon.com" target="_blank" rel="noopener noreferrer" className="company-link">Kumon</a>. 
+              <br /><br />
+              One day, I aspire to work at the FBI or CIA.
             </p>
             <div className="hero__cta">
               <motion.button
