@@ -28,8 +28,7 @@ const Contact = () => {
         >
           <h2 className="section-title">Get in Touch</h2>
           <p className="contact-description">
-            Feel free to reach out to me via email. I'm always open to discussing new projects, 
-            creative ideas, or opportunities to be part of your visions.
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -38,7 +37,7 @@ const Contact = () => {
             onClick={handleEmailClick}
           >
             <FaEnvelope />
-            <span>rchouhan.network@gmail.com</span>
+            <span>Email me here</span>
           </motion.button>
 
           <div className="social-links">

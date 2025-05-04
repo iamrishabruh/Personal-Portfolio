@@ -69,10 +69,10 @@ const Hero = () => {
           {isMobile && (
             <span style={{ 
               display: 'inline-block',
-              fontSize: 'clamp(1.5rem, 5vw, 2.25rem)',
+              fontSize: 'clamp(1rem, 5vw, 1.25rem)',
               color: 'var(--clr-fg)'
             }}>
-              Rishabh Chouhan
+              Rishabh ( rih - SHAHB) Chouhan
             </span>
           )}
         </h1>

@@ -48,7 +48,7 @@ const tourSteps = [
   {
     id: 'contact',
     title: 'Get in Touch',
-    content: 'Feel free to reach out for work opportunities or just to connect! You can email me or find me on various platforms.',
+    content: 'Feel free to reach out for work opportunities or just to connect!',
     target: 'contact'
   }
 ];
