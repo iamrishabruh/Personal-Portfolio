@@ -10,12 +10,22 @@ import Contact from './components/Contact/Contact.jsx'
 import Fireworks from './components/Fireworks/Fireworks'
 import './App.css'
 
+const Section = ({ id, children }) => (
+  <section id={id} className="w-full">
+    <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+        {children}
+      </div>
+    </div>
+  </section>
+)
+
 function App() {
-  const [isPartyMode, setIsPartyMode] = useState(false);
+  const [isPartyMode, setIsPartyMode] = useState(false)
 
   const togglePartyMode = () => {
-    setIsPartyMode(!isPartyMode);
-  };
+    setIsPartyMode(!isPartyMode)
+  }
 
   return (
     <Router>
@@ -25,51 +35,31 @@ function App() {
           <Navbar onPartyModeToggle={togglePartyMode} />
           <main className="w-full">
             <div className="space-y-32">
-              <section id="hero" className="w-full pt-8 md:pt-12">
-                <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-                    <Hero />
-                  </div>
-                </div>
-              </section>
+              <Section id="hero">
+                <Hero />
+              </Section>
 
-              <section id="experience" className="w-full">
-                <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-                    <Experience />
-                  </div>
-                </div>
-              </section>
+              <Section id="experience">
+                <Experience />
+              </Section>
 
-              <section id="projects" className="w-full">
-                <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-                    <Projects />
-                  </div>
-                </div>
-              </section>
+              <Section id="projects">
+                <Projects />
+              </Section>
 
-              <section id="achievements" className="w-full">
-                <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-                    <Achievements />
-                  </div>
-                </div>
-              </section>
+              <Section id="achievements">
+                <Achievements />
+              </Section>
 
-              <section id="contact" className="w-full">
-                <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-                    <Contact />
-                  </div>
-                </div>
-              </section>
+              <Section id="contact">
+                <Contact />
+              </Section>
             </div>
           </main>
         </div>
       </ThemeProvider>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

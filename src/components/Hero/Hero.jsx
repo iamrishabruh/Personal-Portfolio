@@ -43,7 +43,7 @@ const Hero = () => {
             speed={50}
             style={{ 
               display: 'inline-block',
-              fontSize: '2.25rem',
+              fontSize: 'clamp(1.5rem, 5vw, 2.25rem)',
               color: 'var(--clr-fg)'
             }}
             repeat={Infinity}
@@ -54,11 +54,9 @@ const Hero = () => {
           <div className="hero__intro">
             <p className="hero__description">
               At South Forsyth High School, I pushed myself to graduate in the top 2% of my class all while learning to manage Type 1 Diabetes, diagnosed in February 2012. Mastering the art of precise measurements and relentless routines didn't just keep me healthy; it taught me the power of grit, adaptability, and planning under pressure. Those lessons carried me through a BS in Computer Science at GSU and now drive my work toward an MS at Georgia Tech.
-              <br></br>
-              <br></br>
+              <br /><br />
               Seeing my immigrant parents stretch every dollar to keep our family afloat sparked my obsession with financial education. I founded the SFHS Finance & Investment Club, then the GSU AI FinTech Club, to demystify budgeting, investing, and wealth-building for over hundreds of peers—because real freedom comes from knowing how to make smart money decisions, not just chasing the next dollar. 
-              <br></br>
-              <br></br>
+              <br /><br />
               Today, I channel that same energy into solutions that aim to simplify healthcare, finance, and technology for everyone.
             </p>
             <div className="hero__cta">
