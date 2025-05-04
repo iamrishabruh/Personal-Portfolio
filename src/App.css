@@ -121,13 +121,13 @@ body {
 main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 section {
   min-height: 100vh;
-  padding: 2rem 0;
-  margin-bottom: 4rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 section:last-child {
@@ -135,15 +135,15 @@ section:last-child {
 }
 
 .section {
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 1rem;
   position: relative;
   overflow: hidden;
 }
 
 .section__title {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--clr-primary);
   position: relative;
@@ -414,29 +414,34 @@ section:last-child {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .section {
-    padding: 4rem 0;
+  main {
+    padding: 0 0.75rem;
+  }
+
+  section {
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
   }
 
   .section__title {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .panel {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .btn {
@@ -447,7 +452,36 @@ section:last-child {
   .grid-cols-2,
   .grid-cols-3,
   .grid-cols-4 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 0.5rem;
+  }
+
+  section {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .section__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .panel {
+    padding: 0.75rem;
+  }
+
+  .card {
+    padding: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }
 
