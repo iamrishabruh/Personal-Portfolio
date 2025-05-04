@@ -124,20 +124,20 @@ const Navbar = ({ onPartyModeToggle }) => {
           {isMobileMenuOpen && (
             <motion.div
               className="navbar__mobile-menu"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
               <div className="navbar__mobile-items">
                 {navItems.map((item) => (
                   <NavItem key={item.name} item={item} />
                 ))}
-                <div className="navbar__mobile-controls">
-                  <ControlButton onClick={startTour} icon={<FaInfoCircle />} tooltip="Tour" />
-                  <ControlButton onClick={togglePartyMode} icon={<FaBirthdayCake />} tooltip="Party Mode" />
-                  <ControlButton onClick={toggleTheme} icon={isDarkMode ? <BsSunFill /> : <BsMoonFill />} tooltip="Theme" />
-                </div>
+              </div>
+              <div className="navbar__mobile-controls">
+                <ControlButton onClick={startTour} icon={<FaInfoCircle />} tooltip="Tour" />
+                <ControlButton onClick={togglePartyMode} icon={<FaBirthdayCake />} tooltip="Party Mode" />
+                <ControlButton onClick={toggleTheme} icon={isDarkMode ? <BsSunFill /> : <BsMoonFill />} tooltip="Theme" />
               </div>
             </motion.div>
           )}

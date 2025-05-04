@@ -91,31 +91,38 @@
 /* Mobile Menu */
 .navbar__mobile-menu {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: var(--clr-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1000;
 }
 
 .navbar__mobile-items {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--clr-bg);
+  height: 100%;
 }
 
 .navbar__mobile-controls {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   gap: 0.5rem;
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.navbar__mobile-controls .navbar__item {
+  background-color: var(--clr-bg);
+  border: 1px solid var(--clr-bg-alt);
+  box-shadow: var(--shadow);
 }
 
 /* Responsive Adjustments */
