@@ -24,13 +24,13 @@ const tourSteps = [
   {
     id: 'resume',
     title: 'Resume Download',
-    content: 'My resume is available for download, just click the file icon. It contains detailed information about my skills and experiences.',
+    content: 'My resume is available for download, just click the file icon.',
     target: 'hero'
   },
   {
     id: 'experience',
     title: 'Work Experience',
-    content: 'Here you can see my professional journey, including CS internships and engineering roles. Hover to see details.',
+    content: 'Here, you can see my professional journey. Hover to see details.',
     target: 'experience'
   },
   {
