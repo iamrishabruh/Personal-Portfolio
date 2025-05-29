@@ -5,7 +5,7 @@ import './Contact.css';
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:rchouhan.network@gmail.com';
+    window.location.href = 'mailto:rchouhan8@gatech.edu';
   };
 
   const socialLinks = [

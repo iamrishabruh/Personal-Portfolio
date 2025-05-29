@@ -109,7 +109,7 @@ const Hero = () => {
                 <a href="https://github.com/iamrishabruh" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaGithub />
                 </a>
-                <a href="mailto:rchouhan.network@gmail.com" className="social-icon">
+                <a href="mailto:rchouhan8@gatech.edu" className="social-icon">
                   <FaEnvelope />
                 </a>
                 <a href="https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="social-icon">
