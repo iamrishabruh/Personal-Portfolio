@@ -49,7 +49,7 @@ const Hero = () => {
           {!isMobile && (
             <TypeAnimation
               sequence={[
-                'I am Rishabh (rih - SHAHB) Chouhan.',
+                'I am Rishabh (rih - SHUHB) Chouhan.',
                 1800,
                 'Nice to meet you!',
                 1500,
@@ -72,7 +72,7 @@ const Hero = () => {
               fontSize: 'clamp(1rem, 5vw, 1.25rem)',
               color: 'var(--clr-fg)'
             }}>
-              Rishabh ( rih - SHAHB) Chouhan
+              Rishabh ( rih - SHUHB) Chouhan
             </span>
           )}
         </h1>
