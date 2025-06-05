@@ -5,7 +5,7 @@ import './Contact.css';
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.location.href = 'calendly.com/chouhan';
+    window.open('https://calendly.com/chouhan', '_blank', 'noopener,noreferrer');
   };
 
   const socialLinks = [
