@@ -314,7 +314,7 @@ const Achievements = () => {
                         <h4>{award.title}</h4>
                         <p>{award.institution}</p>
                         <span className="achievement-period">{award.period}</span>
-                        {award.issued && <span className="achievement-issued">Issued: {award.issued}</span>}
+                        {award.issued && <span className="achievement-issued"> {award.issued}</span>}
                       </div>
                       {hoveredCard === `academic-${index}` && (
                         <div className="hover-text">Click to access</div>
