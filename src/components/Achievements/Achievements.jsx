@@ -26,6 +26,13 @@ const Achievements = () => {
     {
       title: "President's List",
       institution: 'Georgia State University',
+      period: 'Spring 2025',
+      icon: <FaStar />,
+      link: '/documents/Spring2025PresidentsList.pdf'
+    },
+    {
+      title: "President's List",
+      institution: 'Georgia State University',
       period: 'Fall 2024',
       icon: <FaStar />,
       link: '/documents/Fall2024PresidentsList.pdf'
