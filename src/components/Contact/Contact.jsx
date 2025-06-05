@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaTwitter, FaInstagram, FaFacebook, FaReddit, FaTiktok, FaSoundcloud } from 'react-icons/fa';
+import { FaEnvelope, FaTwitter, FaInstagram, FaFacebook, FaReddit, FaTiktok, FaSoundcloud, FaAddressBook } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:rchouhan8@gatech.edu';
+    window.location.href = 'calendly.com/chouhan';
   };
 
   const socialLinks = [
@@ -36,8 +36,8 @@ const Contact = () => {
             className="email-button"
             onClick={handleEmailClick}
           >
-            <FaEnvelope />
-            <span>Email me here</span>
+            <FaAddressBook />
+            <span>Schedule a call</span>
           </motion.button>
 
           <div className="social-links">
