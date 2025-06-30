@@ -1,34 +1,38 @@
 .experience-section {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background: var(--clr-bg);
+  font-family: var(--font-mono);
 }
 
 .dark .experience-section {
-  background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+  background: var(--clr-bg);
 }
 
 .experience-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .experience-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--clr-fg);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
 }
 
 .dark .experience-title {
-  color: #ffffff;
+  color: var(--clr-fg);
 }
 
 .experience-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -36,68 +40,74 @@
 .experience-card {
   background: var(--clr-bg);
   border-radius: 0;
-  padding: 0.75rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  box-shadow: none;
   transition: all 0.3s ease;
-  border: 1px solid var(--clr-bg-alt);
+  border: 1px solid var(--supreme-red);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  font-family: var(--font-mono);
 }
 
 .dark .experience-card {
-  background: #2d2d2d;
-  border-color: #404040;
+  background: var(--clr-bg);
+  border-color: var(--supreme-red);
 }
 
 .experience-card:hover {
-  background: var(--clr-bg-alt);
-  transform: translateY(-2px);
+  background: var(--clr-bg);
+  transform: none;
+  border-color: var(--supreme-red);
 }
 
 .highlighted {
-  border: 2px solid #FFD700;
-  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.2);
+  border: 2px solid var(--supreme-red);
+  box-shadow: none;
 }
 
 .dark .highlighted {
-  border-color: #FFD700;
-  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+  border-color: var(--supreme-red);
+  box-shadow: none;
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .role-container {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .role {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--clr-fg);
   line-height: 1.2;
   margin: 0;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .dark .role {
-  color: #ffffff;
+  color: var(--clr-fg);
 }
 
 .company {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--clr-primary);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--clr-fg);
   display: inline-block;
+  font-family: var(--font-mono);
 }
 
 .dark .company {
-  color: #9ca3af;
+  color: var(--clr-fg);
 }
 
 .card-details {
@@ -105,7 +115,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 0.25rem;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -114,46 +124,48 @@
 }
 
 .duration, .location {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--clr-fg-alt);
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: var(--clr-fg);
   white-space: nowrap;
+  font-family: var(--font-mono);
 }
 
 .dark .duration, .dark .location {
-  color: #ffffff;
+  color: var(--clr-fg);
 }
 
 .achievements-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 0.5rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-  opacity: 0;
+  margin-top: 1rem;
+  max-height: none;
+  overflow: visible;
+  transition: none;
+  opacity: 1;
 }
 
 .experience-card:hover .achievements-list {
-  max-height: 500px;
+  max-height: none;
   opacity: 1;
 }
 
 .achievement {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--clr-fg);
   padding-left: 1rem;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   line-height: 1.4;
-  transform: translateX(-10px);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: none;
+  opacity: 1;
+  transition: none;
+  font-family: var(--font-mono);
 }
 
 .experience-card:hover .achievement {
-  transform: translateX(0);
+  transform: none;
   opacity: 1;
 }
 
@@ -161,7 +173,7 @@
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--clr-primary);
+  color: var(--supreme-red);
 }
 
 @media (max-width: 768px) {
@@ -171,7 +183,7 @@
 
   .card-header {
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
 
   .card-details {

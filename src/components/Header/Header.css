@@ -5,7 +5,8 @@
     margin: 0 auto;
     justify-content: center;
     position: relative; /* Required for absolute positioning of dropdown */
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    font-family: var(--font-mono);
   }
   
   @media (max-width: 600px) {
@@ -20,20 +21,25 @@
   
   .dropdown-toggle {
     background: transparent;
-    border: none;
-    color: #B6D0E2;
+    border: 1px solid var(--supreme-red);
+    color: var(--pure-black);
     cursor: pointer;
     font-size: 18px;
     display: none; /* Hidden by default on larger screens */
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
   }
   
   .dropdown-menu {
     position: absolute;
     top: 100%; /* Below the toggle button */
     right: 0;
-    background: #444; /* Dropdown background color */
-    border: 1px solid #B6D0E2;
-    border-radius: 5px;
+    background: var(--pure-white);
+    border: 1px solid var(--supreme-red);
+    border-radius: 0;
     z-index: 1000;
     width: 100%; /* Adjust as needed */
   }
@@ -45,17 +51,29 @@
   }
   
   .dropdown-menu li {
-    padding: 10px;
+    padding: 1rem;
+    border-bottom: 1px solid var(--supreme-red);
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none;
   }
   
   .dropdown-menu li a {
-    color: #B6D0E2;
+    color: var(--pure-black);
     text-decoration: none;
     display: block;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
   
   .dropdown-menu li:hover {
-    background: #555; /* Change background on hover */
+    background: var(--supreme-red);
+  }
+  
+  .dropdown-menu li:hover a {
+    color: var(--pure-white);
   }
   
   /* Media query to show dropdown toggle only on mobile */

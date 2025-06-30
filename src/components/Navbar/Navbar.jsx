@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../theme';
-import { FaUser, FaBriefcase, FaProjectDiagram, FaTrophy, FaEnvelope, FaBirthdayCake, FaInfoCircle, FaBars, FaTimes } from 'react-icons/fa';
-import { BsSunFill, BsMoonFill } from 'react-icons/bs';
-import Tour from '../Tour/Tour';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = ({ onPartyModeToggle }) => {
   const { isDarkMode, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState(null);
   const [isPartyMode, setIsPartyMode] = useState(false);
-  const [showTour, setShowTour] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const togglePartyMode = () => {
@@ -22,11 +19,6 @@ const Navbar = ({ onPartyModeToggle }) => {
       document.documentElement.classList.remove('party-mode');
     }
     onPartyModeToggle();
-  };
-
-  const startTour = () => {
-    setShowTour(true);
-    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -43,17 +35,22 @@ const Navbar = ({ onPartyModeToggle }) => {
   }, [isPartyMode, onPartyModeToggle]);
 
   const navItems = [
-    { name: 'About', to: 'hero', icon: FaUser },
-    { name: 'Experience', to: 'experience', icon: FaBriefcase },
-    { name: 'Projects', to: 'projects', icon: FaProjectDiagram },
-    { name: 'Achievements', to: 'achievements', icon: FaTrophy },
-    { name: 'Contact', to: 'contact', icon: FaEnvelope },
+    { name: 'ABOUT', to: 'hero' },
+    { name: 'EXPERIENCE', to: 'experience' },
+    { name: 'PROJECTS', to: 'projects' },
+    { name: 'ACHIEVEMENTS', to: 'achievements' },
+    { name: 'CONTACT', to: 'contact' },
+  ];
+
+  const controlItems = [
+    { name: 'PARTY', onClick: togglePartyMode },
+    { name: isDarkMode ? 'LIGHT' : 'DARK', onClick: toggleTheme },
   ];
 
   const NavItem = ({ item }) => (
     <motion.div
       className={`navbar__item ${activeSection === item.to ? 'active' : ''}`}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <ScrollLink
@@ -65,25 +62,19 @@ const Navbar = ({ onPartyModeToggle }) => {
         onSetInactive={() => setActiveSection(null)}
         onClick={() => setIsMobileMenuOpen(false)}
       >
-        <span className="navbar__icon">
-          <item.icon />
-        </span>
-        <span className="navbar__tooltip">{item.name}</span>
+        <span className="navbar__text">{item.name}</span>
       </ScrollLink>
     </motion.div>
   );
 
-  const ControlButton = ({ onClick, icon, tooltip }) => (
+  const ControlItem = ({ item }) => (
     <motion.button
-      className="navbar__item"
-      onClick={onClick}
-      whileHover={{ scale: 1.1 }}
+      className="navbar__control-item"
+      onClick={item.onClick}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <span className="navbar__icon">
-        {icon}
-      </span>
-      <span className="navbar__tooltip">{tooltip}</span>
+      <span className="navbar__text">{item.name}</span>
     </motion.button>
   );
 
@@ -91,8 +82,8 @@ const Navbar = ({ onPartyModeToggle }) => {
     <>
       <motion.nav
         className={`navbar ${isDarkMode ? 'dark' : 'light'}`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
         transition={{ duration: 0.5 }}
       >
         <div className="navbar__container">
@@ -108,14 +99,18 @@ const Navbar = ({ onPartyModeToggle }) => {
             </span>
           </motion.button>
 
-          {/* Combined Navigation Items and Controls */}
+          {/* Navigation Items */}
           <div className="navbar__items">
             {navItems.map((item) => (
               <NavItem key={item.name} item={item} />
             ))}
-            <ControlButton onClick={startTour} icon={<FaInfoCircle />} tooltip="Tour" />
-            <ControlButton onClick={togglePartyMode} icon={<FaBirthdayCake />} tooltip="Party Mode" />
-            <ControlButton onClick={toggleTheme} icon={isDarkMode ? <BsSunFill /> : <BsMoonFill />} tooltip="Theme" />
+          </div>
+
+          {/* Control Items */}
+          <div className="navbar__controls">
+            {controlItems.map((item) => (
+              <ControlItem key={item.name} item={item} />
+            ))}
           </div>
         </div>
 
@@ -135,16 +130,14 @@ const Navbar = ({ onPartyModeToggle }) => {
                 ))}
               </div>
               <div className="navbar__mobile-controls">
-                <ControlButton onClick={startTour} icon={<FaInfoCircle />} tooltip="Tour" />
-                <ControlButton onClick={togglePartyMode} icon={<FaBirthdayCake />} tooltip="Party Mode" />
-                <ControlButton onClick={toggleTheme} icon={isDarkMode ? <BsSunFill /> : <BsMoonFill />} tooltip="Theme" />
+                {controlItems.map((item) => (
+                  <ControlItem key={item.name} item={item} />
+                ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </motion.nav>
-
-      {showTour && <Tour onClose={() => setShowTour(false)} />}
     </>
   );
 };

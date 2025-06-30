@@ -1,53 +1,62 @@
 .contact-section {
   padding: 1rem 0;
   background: var(--clr-bg);
+  font-family: var(--font-mono);
 }
 
 .contact-container {
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .contact-content {
   text-align: center;
-  padding-bottom: 0.5rem;
+  padding-bottom: 2rem;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--clr-primary);
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--clr-fg);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-mono);
 }
 
 .contact-description {
-  font-size: 0.9rem;
-  color: var(--clr-fg-alt);
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--clr-fg);
+  margin-bottom: 2rem;
   line-height: 1.6;
+  font-family: var(--font-mono);
 }
 
 .email-button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--clr-primary);
-  color: white;
+  padding: 0.5rem 1rem;
+  background: var(--supreme-red);
+  color: var(--pure-white);
   border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border: 1px solid var(--supreme-red);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .email-button:hover {
-  background: var(--clr-bg-alt);
-  transform: translateY(-2px);
+  background: transparent;
+  color: var(--clr-fg);
+  transform: none;
 }
 
 .email-hover-text {
@@ -55,13 +64,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--clr-primary);
+  color: var(--clr-fg);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
   z-index: 1;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .email-button:hover .email-hover-text {
@@ -69,7 +81,7 @@
 }
 
 .email-button:hover .email-content {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .email-button svg {
@@ -81,7 +93,7 @@
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .social-link {
@@ -90,15 +102,18 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  background: var(--clr-bg-alt);
+  border-radius: 0;
+  background: transparent;
   color: var(--clr-fg);
   transition: all 0.3s ease;
+  border: 1px solid var(--supreme-red);
+  font-family: var(--font-mono);
 }
 
 .social-link:hover {
-  background: var(--clr-primary);
-  color: white;
+  background: var(--supreme-red);
+  color: var(--pure-white);
+  text-decoration: none;
 }
 
 .social-link svg {
@@ -108,29 +123,32 @@
 
 .copyright {
   text-align: center;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--clr-bg-alt);
+  font-size: 0.75rem;
+  color: var(--clr-fg);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--supreme-red);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 @media (max-width: 768px) {
   .contact-container {
-    padding: 0 0.75rem;
+    padding: 0 1rem;
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 
   .contact-description {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
   .email-button {
-    padding: 0.6rem 1.25rem;
-    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 
   .social-links {

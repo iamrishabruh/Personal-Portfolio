@@ -20,7 +20,10 @@
   h3,
   h4 {
     line-height: 1.2;
-    color: var(--clr-fg-alt);
+    color: var(--clr-fg);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
   
   h1 {
@@ -45,10 +48,13 @@
   
   a {
     text-decoration: none;
+    color: var(--clr-fg);
+    font-family: var(--font-mono);
   }
   
   button {
     cursor: pointer;
+    font-family: var(--font-mono);
   }
   
   @media (max-width: 900px) {

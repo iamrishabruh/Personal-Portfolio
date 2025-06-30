@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
-import { TypeAnimation } from 'react-type-animation';
 import LinkedInBadge from '../LinkedInBadge/LinkedInBadge';
 import './Hero.css';
 
 const Hero = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 640);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Add event listener for window resize
-    window.addEventListener('resize', checkMobile);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -46,35 +29,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
       >
         <h1 className="hero__title">
-          {!isMobile && (
-            <TypeAnimation
-              sequence={[
-                'I am Rishabh (rih - SHUHB) Chouhan.',
-                1800,
-                'Nice to meet you!',
-                1500,
-                'Scroll down to learn about my life.',
-                3500
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ 
-                display: 'inline-block',
-                fontSize: 'clamp(1.5rem, 5vw, 2.25rem)',
-                color: 'var(--clr-fg)'
-              }}
-              repeat={Infinity}
-            />
-          )}
-          {isMobile && (
-            <span style={{ 
-              display: 'inline-block',
-              fontSize: 'clamp(1rem, 5vw, 1.25rem)',
-              color: 'var(--clr-fg)'
-            }}>
-              Rishabh ( rih - SHUHB) Chouhan
-            </span>
-          )}
+          Rishabh (rih - SHUHB) Chouhan
         </h1>
 
         <div className="hero__main-content">

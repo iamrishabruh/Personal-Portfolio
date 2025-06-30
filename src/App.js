@@ -12,10 +12,8 @@ import './App.css'
 
 const Section = ({ id, children }) => (
   <section id={id} className="w-full">
-    <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
-        {children}
-      </div>
+    <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      {children}
     </div>
   </section>
 )
@@ -30,11 +28,11 @@ function App() {
   return (
     <Router>
       <ThemeProvider>
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+        <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--clr-bg)', color: 'var(--clr-fg)' }}>
           <Fireworks isActive={isPartyMode} />
           <Navbar onPartyModeToggle={togglePartyMode} />
-          <main className="w-full">
-            <div className="space-y-32">
+          <main className="w-full ml-[200px]">
+            <div className="space-y-16">
               <Section id="hero">
                 <Hero />
               </Section>
