@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../theme';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFileAlt, FaGithub, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = ({ onPartyModeToggle }) => {
@@ -25,6 +25,18 @@ const Navbar = ({ onPartyModeToggle }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleResumeClick = () => {
+    window.open('https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?tab=t.0', '_blank');
+  };
+
+  const handleGithubClick = () => {
+    window.open('https://github.com/iamrishabruh', '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.open('mailto:rchouhan8@gatech.edu');
+  };
+
   useEffect(() => {
     return () => {
       if (isPartyMode) {
@@ -45,6 +57,12 @@ const Navbar = ({ onPartyModeToggle }) => {
   const controlItems = [
     { name: 'PARTY', onClick: togglePartyMode },
     { name: isDarkMode ? 'LIGHT' : 'DARK', onClick: toggleTheme },
+  ];
+
+  const linkItems = [
+    { name: 'RESUME', onClick: handleResumeClick, icon: <FaFileAlt /> },
+    { name: 'GITHUB', onClick: handleGithubClick, icon: <FaGithub /> },
+    { name: 'EMAIL', onClick: handleEmailClick, icon: <FaEnvelope /> },
   ];
 
   const NavItem = ({ item }) => (
@@ -74,6 +92,18 @@ const Navbar = ({ onPartyModeToggle }) => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
+      <span className="navbar__text">{item.name}</span>
+    </motion.button>
+  );
+
+  const LinkItem = ({ item }) => (
+    <motion.button
+      className="navbar__link-item"
+      onClick={item.onClick}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <span className="navbar__link-icon">{item.icon}</span>
       <span className="navbar__text">{item.name}</span>
     </motion.button>
   );
@@ -112,6 +142,13 @@ const Navbar = ({ onPartyModeToggle }) => {
               <ControlItem key={item.name} item={item} />
             ))}
           </div>
+
+          {/* Link Items */}
+          <div className="navbar__links">
+            {linkItems.map((item) => (
+              <LinkItem key={item.name} item={item} />
+            ))}
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -132,6 +169,11 @@ const Navbar = ({ onPartyModeToggle }) => {
               <div className="navbar__mobile-controls">
                 {controlItems.map((item) => (
                   <ControlItem key={item.name} item={item} />
+                ))}
+              </div>
+              <div className="navbar__mobile-links">
+                {linkItems.map((item) => (
+                  <LinkItem key={item.name} item={item} />
                 ))}
               </div>
             </motion.div>
