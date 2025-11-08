@@ -49,6 +49,7 @@ const Navbar = ({ onPartyModeToggle }) => {
   const navItems = [
     { name: 'ABOUT', to: 'hero' },
     { name: 'EXPERIENCE', to: 'experience' },
+    { name: 'EDUCATION', to: 'education' },
     { name: 'PROJECTS', to: 'projects' },
     { name: 'ACHIEVEMENTS', to: 'achievements' },
     { name: 'CONTACT', to: 'contact' },

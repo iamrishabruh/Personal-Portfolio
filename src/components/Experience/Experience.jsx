@@ -3,17 +3,20 @@ import './Experience.css';
 
 const experiences = [
   {
+    id: 'careaccess-ai',
+    company: "Care Access",
+    role: "AI Marketing Operations Analyst",
+    duration: "Jul 2025 – Present",
+    location: "Remote",
+    isHighlighted: true
+  },
+  {
     id: 'skincentric',
     company: "Skincentric",
     role: "Founding Software Engineer",
     duration: "Dec 2024 – Mar 2025",
     location: "Remote",
-    isHighlighted: true,
-    achievements: [
-      "Led development of core platform architecture",
-      "Implemented scalable backend services",
-      "Built responsive frontend interfaces"
-    ]
+    isHighlighted: true
   },
   {
     id: 'outlier',
@@ -21,12 +24,7 @@ const experiences = [
     role: "Senior AI Code Reviewer & University Fellow",
     duration: "Nov 2024 – Feb 2025",
     location: "Remote",
-    isHighlighted: false,
-    achievements: [
-      "Reviewed and improved AI-generated code",
-      "Mentored junior reviewers",
-      "Contributed to code quality standards"
-    ]
+    isHighlighted: false
   },
   {
     id: 'kaiser',
@@ -34,51 +32,23 @@ const experiences = [
     role: "Software Engineering Intern",
     duration: "Jun 2023 – Sep 2023",
     location: "Buckhead, GA",
-    isHighlighted: true,
-    achievements: [
-      "Cut iOS test-automation time by 40% through innovative ML solutions",
-      "Developed and maintained automated testing frameworks",
-      "Collaborated with cross-functional teams"
-    ]
-  },
-  {
-    id: 'perplexity',
-    company: "Perplexity",
-    role: "AI Business Fellow",
-    duration: "Feb 2025 – Present",
-    location: "Remote",
-    isHighlighted: false,
-    achievements: [
-      "Worked on AI business applications",
-      "Developed AI solutions for business problems",
-      "Collaborated with industry experts"
-    ]
+    isHighlighted: true
   },
   {
     id: 'reachmind',
     company: "Reachmind LLC",
-    role: "Founder & CTO",
+    role: "Founder",
     duration: "Jul 2024 – Present",
     location: "Remote",
-    isHighlighted: false,
-    achievements: [
-      "Founded and led technical direction",
-      "Developed core product architecture",
-      "Managed technical team"
-    ]
+    isHighlighted: false
   },
   {
     id: 'careaccess',
     company: "Care Access",
     role: "Community Engagement Ambassador",
-    duration: "Jun 2023 – Present",
+    duration: "Jun 2023 – Jul 2025",
     location: "Atlanta, GA",
-    isHighlighted: false,
-    achievements: [
-      "Led community engagement initiatives",
-      "Developed outreach programs",
-      "Managed community relationships"
-    ]
+    isHighlighted: false
   },
   {
     id: 'walmart',
@@ -86,12 +56,7 @@ const experiences = [
     role: "Deli Manager",
     duration: "May 2022 – Aug 2023",
     location: "Cumming, GA",
-    isHighlighted: false,
-    achievements: [
-      "Managed daily operations and staff",
-      "Ensured quality control and customer satisfaction",
-      "Maintained inventory and ordering systems"
-    ]
+    isHighlighted: false
   },
   {
     id: 'mangia',
@@ -99,25 +64,15 @@ const experiences = [
     role: "Team Lead",
     duration: "Sep 2021 – Jun 2022",
     location: "Alpharetta, GA",
-    isHighlighted: false,
-    achievements: [
-      "Led team of 15+ employees",
-      "Coordinated daily operations",
-      "Implemented efficiency improvements"
-    ]
+    isHighlighted: false
   },
   {
     id: 'hexaware',
     company: "Hexaware Technologies",
-    role: "Software Engineering Intern",
+    role: "Accounts Receivable Associate",
     duration: "Jun 2021 – Sep 2021",
     location: "Dunwoody, GA",
-    isHighlighted: true,
-    achievements: [
-      "Developed web applications using React",
-      "Implemented RESTful APIs",
-      "Participated in agile development"
-    ]
+    isHighlighted: true
   },
   {
     id: 'starbucks',
@@ -125,12 +80,7 @@ const experiences = [
     role: "Barista",
     duration: "Sep 2020 – Jun 2021",
     location: "Cumming, GA",
-    isHighlighted: false,
-    achievements: [
-      "Prepared high-quality beverages",
-      "Provided excellent customer service",
-      "Maintained store cleanliness"
-    ]
+    isHighlighted: false
   },
   {
     id: 'freddys',
@@ -138,12 +88,7 @@ const experiences = [
     role: "Grill Cook",
     duration: "Oct 2019 – Sep 2020",
     location: "Cumming, GA",
-    isHighlighted: false,
-    achievements: [
-      "Prepared food to specifications",
-      "Maintained food safety standards",
-      "Worked in fast-paced environment"
-    ]
+    isHighlighted: false
   },
   {
     id: 'kumon',
@@ -151,12 +96,7 @@ const experiences = [
     role: "Tutor",
     duration: "Aug 2019 – Oct 2019",
     location: "Cumming, GA",
-    isHighlighted: false,
-    achievements: [
-      "Tutored students in math and reading",
-      "Tracked student progress",
-      "Created personalized learning plans"
-    ]
+    isHighlighted: false
   }
 ];
 
@@ -183,14 +123,6 @@ export default function Experience() {
                   <span className="location">{exp.location}</span>
                 </div>
               </div>
-              
-              <ul className="achievements-list">
-                {exp.achievements.map((achievement) => (
-                  <li key={`${exp.id}-${achievement}`} className="achievement">
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

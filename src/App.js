@@ -4,6 +4,7 @@ import { ThemeProvider } from './theme'
 import Navbar from './components/Navbar/Navbar.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Experience from './components/Experience/Experience.jsx'
+import Education from './components/Education/Education.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Achievements from './components/Achievements/Achievements.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -39,6 +40,10 @@ function App() {
 
               <Section id="experience">
                 <Experience />
+              </Section>
+
+              <Section id="education">
+                <Education />
               </Section>
 
               <Section id="projects">
