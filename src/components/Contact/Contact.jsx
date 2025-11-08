@@ -14,7 +14,7 @@ const Contact = () => {
     { icon: FaFacebook, url: 'https://www.facebook.com/profile.php?id=100012571633391', label: 'Facebook' },
     { icon: FaReddit, url: 'https://www.reddit.com/user/Rishabruh/', label: 'Reddit' },
     { icon: FaTiktok, url: 'https://www.tiktok.com/@rishabruh', label: 'TikTok' },
-    { icon: FaSoundcloud, url: 'https://soundcloud.com/user-327272861', label: 'SoundCloud' },
+    { icon: FaSoundcloud, url: 'https://soundcloud.com/rishabruh', label: 'SoundCloud' },
   ];
 
   return (
