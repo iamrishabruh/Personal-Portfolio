@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
         </motion.div>
         <div className="copyright">
-          © Rishabh Chouhan 2025
+          © Rishabh Chouhan 2026
         </div>
       </div>
     </section>

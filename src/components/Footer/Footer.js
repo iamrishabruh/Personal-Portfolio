@@ -6,7 +6,7 @@ const Footer = () => (
       href='https://github.com/iamrishabruh/portfolio/'
       className='link footer__link'
     >
-      @ Rishabh Chouhan 2025
+      @ Rishabh Chouhan 2026
     </a>
   </footer>
 )
