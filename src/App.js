@@ -12,7 +12,7 @@ import Fireworks from './components/Fireworks/Fireworks'
 import './App.css'
 
 const Section = ({ id, children }) => (
-  <section id={id} className="w-full" style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden', boxSizing: 'border-box' }}>
+  <section id={id} className="w-full" style={{ width: '100%', maxWidth: '100vw', overflowX: 'hidden', boxSizing: 'border-box' }}>
     <div className="max-w-7xl mx-auto" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box', paddingLeft: '0', paddingRight: '0' }}>
       {children}
     </div>
@@ -32,8 +32,8 @@ function App() {
         <div className="min-h-screen transition-colors duration-300" style={{ backgroundColor: 'var(--clr-bg)', color: 'var(--clr-fg)', overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
           <Fireworks isActive={isPartyMode} />
           <Navbar onPartyModeToggle={togglePartyMode} />
-          <main className="w-full ml-[200px] md:ml-0" style={{ overflowX: 'hidden', maxWidth: '100%' }}>
-            <div className="space-y-16 md:space-y-8" style={{ width: '100%', maxWidth: '100%' }}>
+          <main className="w-full ml-[200px] md:ml-0" style={{ overflowX: 'hidden', maxWidth: '100vw', width: '100vw', boxSizing: 'border-box' }}>
+            <div className="space-y-16 md:space-y-8" style={{ width: '100%', maxWidth: '100%', boxSizing: 'border-box' }}>
               <Section id="hero">
                 <Hero />
               </Section>

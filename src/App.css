@@ -137,15 +137,17 @@ main {
     padding-top: 3rem;
     padding-left: 0;
     padding-right: 0;
-    max-width: 100%;
-    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .w-full {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .space-y-16 > * + * {
@@ -159,6 +161,7 @@ main {
     max-width: 100vw;
     width: 100vw;
     overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   .space-y-16 > * + * {
