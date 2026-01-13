@@ -187,26 +187,89 @@
 }
 
 @media (max-width: 768px) {
+  .experience-section {
+    padding: 2rem 0;
+  }
+
+  .experience-container {
+    padding: 0 1rem;
+  }
+
+  .experience-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   .experience-grid {
-    padding: 0 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
   }
 
   .card-header {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    align-items: flex-start;
   }
 
   .card-details {
     align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  .achievements-list {
-    max-height: none;
-    opacity: 1;
+  .role {
+    font-size: 0.875rem;
   }
 
-  .achievement {
-    transform: none;
-    opacity: 1;
+  .company {
+    font-size: 0.75rem;
+  }
+
+  .duration, .location {
+    font-size: 0.7rem;
+  }
+
+  .experience-description {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 1.5rem 0;
+  }
+
+  .experience-container {
+    padding: 0 0.75rem;
+  }
+
+  .experience-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+
+  .role {
+    font-size: 0.8rem;
+  }
+
+  .company {
+    font-size: 0.7rem;
+  }
+
+  .duration, .location {
+    font-size: 0.65rem;
+  }
+
+  .experience-description {
+    font-size: 0.75rem;
+    line-height: 1.6;
   }
 } 

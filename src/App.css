@@ -112,6 +112,26 @@ main {
   main {
     margin-left: 0;
     padding-top: 3rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .space-y-16 > * + * {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 3rem;
+  }
+
+  .space-y-16 > * + * {
+    margin-top: 1.5rem;
   }
 }
 
