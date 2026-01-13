@@ -2,6 +2,10 @@
   padding: 3rem 0;
   background: var(--clr-bg);
   font-family: var(--font-mono);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .dark .projects-section {
@@ -47,6 +51,11 @@
   position: relative;
   overflow: visible;
   font-family: var(--font-mono);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .dark .project-card {
@@ -120,6 +129,9 @@
   margin-bottom: 1.5rem;
   margin-top: 1rem;
   font-family: var(--font-mono);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .dark .project-description {

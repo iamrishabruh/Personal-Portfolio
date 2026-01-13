@@ -26,7 +26,7 @@ const Navbar = ({ onPartyModeToggle }) => {
   };
 
   const handleResumeClick = () => {
-    window.open('https://docs.google.com/document/d/1SakbgqbsVfTRG0LEvArHYuL_DI5uE335T5cP2TNbZPE/edit?tab=t.0', '_blank');
+    window.open('https://docs.google.com/document/d/1x2QxwMWGLz6qBj_gXmm5QUTAwrnLJYwLzrfUEADy9vk/edit?usp=sharing', '_blank');
   };
 
   const handleGithubClick = () => {

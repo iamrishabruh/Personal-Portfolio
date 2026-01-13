@@ -2,6 +2,10 @@
   padding: 3rem 0;
   background: var(--clr-bg);
   font-family: var(--font-mono);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .dark .experience-section {
@@ -12,6 +16,9 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .experience-title {
@@ -47,6 +54,11 @@
   position: relative;
   overflow: visible;
   font-family: var(--font-mono);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .dark .experience-card {
@@ -139,6 +151,9 @@
   margin-top: 1.5rem;
   font-family: var(--font-mono);
   max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .dark .duration, .dark .location {
