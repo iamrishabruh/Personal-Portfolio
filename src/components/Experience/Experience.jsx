@@ -3,29 +3,100 @@ import './Experience.css';
 
 const experiences = [
   {
-    id: 'careaccess-ai',
+    id: "careaccess-ai-marketing-ops-analyst",
     company: "Care Access",
-    role: "AI Driven Marketing Operations Analyst",
+    role: "AI Marketing Operations Analyst",
     duration: "Jul 2025 – Present",
     location: "Remote",
     isHighlighted: true,
-    description: "Architected and implemented end-to-end automation systems integrating Monday.com, Slack, Google Workspace, Microsoft Graph, Databricks, and Microsoft Fabric to support clinical trial operations, recruitment workflows, and field execution at global scale. Replaced manual operational processes with reliable, auditable automation pipelines using structured logging, diagnostics, and state tracking to improve traceability and resilience. Designed dynamic Monday.com workflows using board relations, people columns, and form ingestion to automate event creation, staffing coordination, and study updates without data loss. Built Slack orchestration systems to programmatically create channels, invite role-based participants, post formatted summaries, and manage mobile-safe message rendering. Developed secure data engineering pipelines with normalized lookup tables, deduplicated mappings, and curated warehouse views exposed via Fabric GraphQL APIs. Implemented privacy-preserving data practices using SHA-256 hashing with secret peppering to enable secure joins while maintaining compliance. Led migration of business-critical automations to a GitHub-based SDLC, defining repo structure, environment-scoped secrets, versioning, and deployment practices."
+    description:
+      "Bringing AI to Care Access."
   },
   {
-    id: 'skincentric',
+    id: "reachmind-founder",
+    company: "Reachmind LLC",
+    role: "Founder",
+    duration: "Feb 2025 – Present",
+    location: "United States",
+    isHighlighted: true,
+    description:
+      "Systems and automation studio that helps organizations reduce manual work by turning scattered tools and data into clear, reliable workflows."
+  },
+  {
+    id: "careaccess-community-ambassador",
+    company: "Care Access",
+    role: "Community Ambassador",
+    duration: "Apr 2024 – May 2025",
+    location: "Decatur, GA",
+    isHighlighted: true,
+    description: ""
+  },
+  {
+    id: "skincentric-founding-swe",
     company: "Skincentric",
     role: "Founding Software Engineer",
     duration: "Dec 2024 – Mar 2025",
-    location: "Remote",
-    isHighlighted: true
+    location: "Atlanta, GA",
+    isHighlighted: true,
+    description:
+      "4 month contract."
   },
   {
-    id: 'kaiser',
+    id: "kaiser-swe-intern",
     company: "Kaiser Permanente",
     role: "Software Engineering Intern",
     duration: "Jun 2023 – Sep 2023",
-    location: "Buckhead, GA",
-    isHighlighted: true
+    location: "San Jose, CA",
+    isHighlighted: true,
+    description:
+      "Part of the KP Mobile Flagship project in Atlanta, GA."
+  },
+  {
+    id: "walmart-deli-operator-manager",
+    company: "Walmart",
+    role: "Deli Operator/Manager",
+    duration: "May 2022 – Aug 2022",
+    location: "Cumming, GA",
+    isHighlighted: false,
+    description:
+      "4am - 1pm zzz."
+  },
+  {
+    id: "hexaware-accounts-receivable-associate",
+    company: "Hexaware Technologies",
+    role: "Accounts Receivable Associate",
+    duration: "Jun 2021 – Sep 2021",
+    location: "Dunwoody, GA",
+    isHighlighted: false,
+    description:
+      "Resolved balance claims with major insurers (Aetna, Blue Cross, Cigna)."
+  },
+  {
+    id: "starbucks-barista",
+    company: "Starbucks",
+    role: "Barista",
+    duration: "Sep 2020 – Jun 2021",
+    location: "Cumming, GA",
+    isHighlighted: false,
+    description: ""
+  },
+  {
+    id: "freddys-grill-cook",
+    company: "Freddy's Frozen Custard & Steakburgers",
+    role: "Grill Cook",
+    duration: "Oct 2019 – Sep 2020",
+    location: "Cumming, GA",
+    isHighlighted: false,
+    description: ""
+  },
+  {
+    id: "kumon-tutor",
+    company: "Kumon North America, Inc.",
+    role: "Tutor",
+    duration: "Aug 2019 – Oct 2019",
+    location: "Cumming, GA",
+    isHighlighted: false,
+    description: ""
   }
 ];
 

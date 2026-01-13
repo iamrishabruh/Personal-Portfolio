@@ -61,10 +61,6 @@
     padding: 2rem 0;
   }
 
-  .achievements-container {
-    padding: 0 1rem;
-  }
-
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -110,10 +106,6 @@
     padding: 1.5rem 0;
   }
 
-  .achievements-container {
-    padding: 0 0.75rem;
-  }
-
   .section-title {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
@@ -152,6 +144,24 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .achievements-container {
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-container {
+    padding: 0 0.75rem;
+    width: calc(100% - 1.5rem);
+    max-width: calc(100vw - 1.5rem);
+  }
 }
 
 .section-title {
