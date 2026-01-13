@@ -72,61 +72,52 @@ const Achievements = () => {
 
   const fblaAwards = [
     {
-      title: 'CSA Volunteering Awards',
-      event: 'Future Business Leaders of America',
-      year: '2018 - 2022',
-      awards: ['Community Award', 'Service Award', 'Achievement Award'],
-      description: 'National recognition for 500+ hours of volunteer service',
-      icon: <FaTrophy />,
-      link: 'https://georgiafbla.org/community-service-awards-csa/'
-    },
-    {
-      title: 'Business Achievement Awards (BAA)',
-      event: 'Future Business Leaders of America',
-      year: '2018 - 2022',
-      awards: ['Contributor Award', 'Leader Award', 'Advocate Award', 'Capstone Award'],
-      icon: <FaTrophy />,
-      link: 'https://www.fbla.org/business-achievement-awards/'
-    },
-    {
-      title: 'FBLA State Leadership Conference Rankings',
+      title: 'FBLA State Leadership Conference',
       event: 'Computer Problem Solving',
       year: '2021',
-      placement: '1st Place',
+      placement: '1st in State',
       icon: <FaTrophy />,
       isRanking: true
     },
     {
-      title: 'FBLA State Leadership Conference Rankings',
+      title: 'FBLA State Leadership Conference',
       event: 'Computer Applications',
       year: '2021',
-      placement: '2nd Place',
+      placement: '2nd in State',
       icon: <FaTrophy />,
       isRanking: true
     },
     {
-      title: 'FBLA State Leadership Conference Rankings',
+      title: 'FBLA State Leadership Conference',
       event: 'Desktop Publishing',
       year: '2019',
-      placement: '2nd Place',
+      placement: '2nd in State',
       icon: <FaTrophy />,
       isRanking: true
     },
     {
-      title: 'FBLA State Leadership Conference Rankings',
+      title: 'FBLA State Leadership Conference',
       event: 'Keyboarding Applications II',
       year: '2019',
-      placement: '4th Place',
+      placement: '4th in State',
       icon: <FaTrophy />,
       isRanking: true
+    },
+    {
+      title: 'FBLA Volunteer',
+      event: 'Future Business Leaders of America',
+      year: 'Aug 2015 - May 2025',
+      description: 'Volunteer, Member, Mentor, President - 500+ service hours',
+      icon: <FaTrophy />,
+      isRanking: false
     }
   ];
 
   const certifications = [
     {
-      title: 'Practical Database Design: Implementing Responsible Data Solutions with SQL Querying',
-      issuer: 'LinkedIn',
-      link: '/documents/database-design-certificate.pdf',
+      title: 'Generative AI Engineering with Databricks',
+      issuer: 'Databricks',
+      link: '#',
       type: 'view'
     },
     {
@@ -136,28 +127,10 @@ const Achievements = () => {
       type: 'view'
     },
     {
-      title: 'Research Skills Certificate of Completion',
-      issuer: 'Georgia State University',
-      link: '/documents/research-skills-certificate.pdf',
-      type: 'download'
-    },
-    {
-      title: 'HIPAA Business Associate',
-      issuer: 'CITI Program',
-      link: '/documents/hipaa-certificate.pdf',
-      type: 'download'
-    },
-    {
-      title: 'Introduction to Biosafety',
-      issuer: 'CITI Program',
-      link: '/documents/biosafety-certificate.pdf',
-      type: 'download'
-    },
-    {
-      title: 'Student Health Clinic – Health Privacy',
-      issuer: 'CITI Program',
-      link: '/documents/health-privacy-certificate.pdf',
-      type: 'download'
+      title: 'Practical Database Design: Implementing Responsible Data Solutions with SQL Querying',
+      issuer: 'LinkedIn',
+      link: '/documents/database-design-certificate.pdf',
+      type: 'view'
     },
     {
       title: 'PowerPoint 2016: Core Presentation Design & Delivery Skills',
@@ -176,6 +149,24 @@ const Achievements = () => {
       issuer: 'Microsoft',
       link: '/documents/excel-certificate.pdf',
       type: 'view'
+    },
+    {
+      title: 'HIPAA Business Associate',
+      issuer: 'CITI Program',
+      link: '/documents/hipaa-certificate.pdf',
+      type: 'download'
+    },
+    {
+      title: 'Research Skills Certificate of Completion',
+      issuer: 'Georgia State University',
+      link: '/documents/research-skills-certificate.pdf',
+      type: 'download'
+    },
+    {
+      title: 'Student Health Clinic – Health Privacy',
+      issuer: 'CITI Program',
+      link: '/documents/health-privacy-certificate.pdf',
+      type: 'download'
     }
   ];
 
@@ -242,28 +233,23 @@ const Achievements = () => {
 
   const generalAchievements = [
     {
-      title: 'Medical Research',
-      description: 'Connected over 2,000 people with Lp(a) clinical trials through Care Access.',
+      title: 'ACT Score',
+      description: '35/36',
       icon: <FaStar />
     },
     {
-      title: 'Academics',
-      description: 'ACT Score: 35/36 (99th Percentile), AP Scholar with Distinction, Weighted GPA: 4.3/4.0', 
+      title: 'AP Scholar with Distinction',
+      description: 'College Board Recognition',
       icon: <FaStar />
     },
     {
-      title: 'Nat. FBLA CSA Award',
-      description: 'Completed over 500 volunteer hours',
+      title: 'FBLA Volunteer',
+      description: '500+ service hours, National recognition',
       icon: <FaTrophy />
     },
     {
-      title: 'Math Kangaroo',
-      description: '1× 1st Place, 2× 2nd Place (elementary)',
-      icon: <FaTrophy />
-    },
-    {
-      title: 'Handwriting',
-      description: 'Multiple handwriting awards in elementary school :P',
+      title: 'Founder',
+      description: 'Finance & Investment Club (2019-2022), AI FinTech Club (2024-2025)',
       icon: <FaStar />
     }
   ];

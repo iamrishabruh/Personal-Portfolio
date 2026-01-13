@@ -1,48 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import fetchGitHubRepos from '../../services/githubService';
+import React from 'react';
 import './Projects.css';
 
-export default function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const githubUsername = process.env.REACT_APP_GITHUB_USERNAME || 'iamrishabruh';
-        const repos = await fetchGitHubRepos(githubUsername);
-        setProjects(repos);
-      } catch (error) {
-        console.error('Error fetching GitHub projects:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
-
-  if (loading) {
-    return (
-      <section id="projects" className="projects-section">
-        <div className="projects-container">
-          <h2 className="projects-title">Featured Projects</h2>
-          <div className="loading">Loading projects...</div>
-        </div>
-      </section>
-    );
+const projects = [
+  {
+    name: 'Diatrend',
+    duration: 'Dec 2024 - May 2025',
+    description: 'Designed and implemented an AI-driven CGM trajectory prediction system using PyTorch, extracting advanced temporal and clinical features from continuous glucose monitoring data to enable proactive diabetes management. Built and evaluated multiple state-of-the-art model architectures—including TabTransformer, Graph Neural Networks, and attention-based MLPs—with rigorous temporal cross-validation, robustness testing, and clinical-significance analysis. Deployed a FastAPI inference service and an interactive Streamlit dashboard to support real-time predictions, visualization, and experimentation, bridging research-grade models with deployable healthcare AI systems.',
+    sourceCode: 'https://github.com/iamrishabruh/Diatrend-ML',
+    stack: ['Python', 'PyTorch', 'FastAPI', 'Streamlit', 'TabTransformer', 'Graph Neural Networks']
+  },
+  {
+    name: 'Nexus Lite',
+    duration: 'Dec 2024 - May 2025',
+    description: 'Built a cross-platform mobile health-tracking application using React Native (Expo) and FastAPI, enabling users to securely log and manage daily health metrics across iOS and Android from a single codebase. Designed and implemented a backend architecture with Python (FastAPI) and SQL, including user authentication, structured health data storage, and secure API endpoints for client-server communication. Applied software engineering best practices including hashed credential storage, HTTPS-based API communication, Git-based version control, modular architecture, and automated testing to ensure security, scalability, and maintainability.',
+    sourceCode: 'https://github.com/iamrishabruh/Nexus-Lite',
+    stack: ['React Native', 'Expo', 'FastAPI', 'Python', 'SQL']
+  },
+  {
+    name: 'Bennington',
+    duration: 'Dec 2024 - May 2025',
+    description: 'Built a production-ready stock backtesting and ML trading platform in Python, integrating historical market data ingestion, realistic trade execution logic, and LSTM-based time-series forecasting to evaluate and compare trading strategies. Designed an interactive Streamlit application that allows users to fetch market data, train models, and run backtests on demand, surfacing performance metrics and visualizations in real time. Containerized the full system with Docker and deployed it to Google Cloud Run, implementing secure environment-based configuration, API key management, and scalable service deployment practices.',
+    sourceCode: 'https://github.com/iamrishabruh/Bennington',
+    stack: ['Python', 'LSTM', 'Streamlit', 'Docker', 'Google Cloud Run']
+  },
+  {
+    name: 'Differential Learning',
+    duration: 'Aug 2024 - Dec 2024',
+    description: 'Built a federated learning simulation framework in Python/TensorFlow that trains an EHR classification model across multiple clients while preserving data privacy using differential privacy with per-example gradient clipping and a custom DPAdam optimizer. Implemented robust client update aggregation using gradient clustering techniques, and evaluated system behavior through accuracy–privacy (ε) trade-off analysis, ROC curves, and comparative performance metrics. Developed an interactive Streamlit interface to configure federated training parameters and visualize model performance and resource consumption, enabling reproducible experimentation and system-level analysis.',
+    sourceCode: 'https://github.com/iamrishabruh/Differential-Learning',
+    stack: ['Python', 'TensorFlow', 'Federated Learning', 'Differential Privacy', 'Streamlit']
+  },
+  {
+    name: 'Drug-Interaction-Checker',
+    duration: 'Jun 2023 - Sep 2023',
+    description: 'Designed and built a Swift / SwiftUI proof-of-concept drug interaction feature for a large-scale iOS healthcare application, integrating external clinical APIs to surface multi-drug interaction risks and improve patient safety. Implemented a clean, modular iOS architecture with dedicated UI, networking, and data layers, including robust error handling, real-time API fetching, and data modeling aligned with enterprise coding standards. Developed and validated the feature using XCTest unit and UI tests, Git-based version control, and CI workflows, ensuring reliability, maintainability, and production-ready engineering practices in a regulated healthcare environment.',
+    sourceCode: 'https://github.com/iamrishabruh/Drug-Interaction-Checker',
+    stack: ['Swift', 'SwiftUI', 'XCTest', 'iOS']
   }
+];
 
+export default function Projects() {
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
-        <h2 className="projects-title">Featured Projects</h2>
+        <h2 className="projects-title">Projects</h2>
         
         <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.name} className="project-card">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card">
               <div className="card-header">
                 <h3 className="project-title">{project.name}</h3>
+                <span className="project-duration">{project.duration}</span>
               </div>
               
               <p className="project-description">{project.description}</p>
@@ -67,19 +75,6 @@ export default function Projects() {
                   </svg>
                   GitHub
                 </a>
-                {project.livePreview && (
-                  <a
-                    href={project.livePreview}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    Live Demo
-                  </a>
-                )}
               </div>
             </div>
           ))}

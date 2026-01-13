@@ -1,13 +1,13 @@
 .contact-section {
-  padding: 1rem 0;
+  padding: 3rem 0;
   background: var(--clr-bg);
   font-family: var(--font-mono);
 }
 
 .contact-container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .contact-content {
@@ -16,10 +16,10 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--clr-fg);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-family: var(--font-mono);
@@ -28,8 +28,8 @@
 .contact-description {
   font-size: 0.875rem;
   color: var(--clr-fg);
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
   font-family: var(--font-mono);
 }
 

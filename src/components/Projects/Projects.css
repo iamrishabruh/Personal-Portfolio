@@ -1,5 +1,5 @@
 .projects-section {
-  padding: 1rem 0;
+  padding: 3rem 0;
   background: var(--clr-bg);
   font-family: var(--font-mono);
 }
@@ -9,16 +9,16 @@
 }
 
 .projects-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .projects-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
   color: var(--clr-fg);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -32,15 +32,15 @@
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 700px;
+  gap: 2rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .project-card {
   background: var(--clr-bg);
   border-radius: 0;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: none;
   transition: all 0.3s ease;
   border: 1px solid var(--supreme-red);
@@ -94,7 +94,7 @@
 }
 
 .project-title {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--clr-fg);
   margin-bottom: 0.5rem;
@@ -103,15 +103,22 @@
   letter-spacing: 0.1em;
 }
 
+.project-duration {
+  font-size: 0.75rem;
+  color: var(--clr-fg);
+  font-family: var(--font-mono);
+}
+
 .dark .project-title {
   color: var(--clr-fg);
 }
 
 .project-description {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--clr-fg);
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
   font-family: var(--font-mono);
 }
 

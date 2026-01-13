@@ -5,10 +5,11 @@ const experiences = [
   {
     id: 'careaccess-ai',
     company: "Care Access",
-    role: "AI Marketing Operations Analyst",
+    role: "AI Driven Marketing Operations Analyst",
     duration: "Jul 2025 – Present",
     location: "Remote",
-    isHighlighted: true
+    isHighlighted: true,
+    description: "Architected and implemented end-to-end automation systems integrating Monday.com, Slack, Google Workspace, Microsoft Graph, Databricks, and Microsoft Fabric to support clinical trial operations, recruitment workflows, and field execution at global scale. Replaced manual operational processes with reliable, auditable automation pipelines using structured logging, diagnostics, and state tracking to improve traceability and resilience. Designed dynamic Monday.com workflows using board relations, people columns, and form ingestion to automate event creation, staffing coordination, and study updates without data loss. Built Slack orchestration systems to programmatically create channels, invite role-based participants, post formatted summaries, and manage mobile-safe message rendering. Developed secure data engineering pipelines with normalized lookup tables, deduplicated mappings, and curated warehouse views exposed via Fabric GraphQL APIs. Implemented privacy-preserving data practices using SHA-256 hashing with secret peppering to enable secure joins while maintaining compliance. Led migration of business-critical automations to a GitHub-based SDLC, defining repo structure, environment-scoped secrets, versioning, and deployment practices."
   },
   {
     id: 'skincentric',
@@ -19,84 +20,12 @@ const experiences = [
     isHighlighted: true
   },
   {
-    id: 'outlier',
-    company: "Outlier AI",
-    role: "Senior AI Code Reviewer & University Fellow",
-    duration: "Nov 2024 – Feb 2025",
-    location: "Remote",
-    isHighlighted: false
-  },
-  {
     id: 'kaiser',
     company: "Kaiser Permanente",
     role: "Software Engineering Intern",
     duration: "Jun 2023 – Sep 2023",
     location: "Buckhead, GA",
     isHighlighted: true
-  },
-  {
-    id: 'reachmind',
-    company: "Reachmind LLC",
-    role: "Founder",
-    duration: "Jul 2024 – Present",
-    location: "Remote",
-    isHighlighted: false
-  },
-  {
-    id: 'careaccess',
-    company: "Care Access",
-    role: "Community Engagement Ambassador",
-    duration: "Jun 2023 – Jul 2025",
-    location: "Atlanta, GA",
-    isHighlighted: false
-  },
-  {
-    id: 'walmart',
-    company: "Walmart",
-    role: "Deli Manager",
-    duration: "May 2022 – Aug 2023",
-    location: "Cumming, GA",
-    isHighlighted: false
-  },
-  {
-    id: 'mangia',
-    company: "Mangia",
-    role: "Team Lead",
-    duration: "Sep 2021 – Jun 2022",
-    location: "Alpharetta, GA",
-    isHighlighted: false
-  },
-  {
-    id: 'hexaware',
-    company: "Hexaware Technologies",
-    role: "Accounts Receivable Associate",
-    duration: "Jun 2021 – Sep 2021",
-    location: "Dunwoody, GA",
-    isHighlighted: true
-  },
-  {
-    id: 'starbucks',
-    company: "Starbucks",
-    role: "Barista",
-    duration: "Sep 2020 – Jun 2021",
-    location: "Cumming, GA",
-    isHighlighted: false
-  },
-  {
-    id: 'freddys',
-    company: "Freddy's Frozen Custard & Steakburgers",
-    role: "Grill Cook",
-    duration: "Oct 2019 – Sep 2020",
-    location: "Cumming, GA",
-    isHighlighted: false
-  },
-  {
-    id: 'kumon',
-    company: "Kumon North America",
-    role: "Tutor",
-    duration: "Aug 2019 – Oct 2019",
-    location: "Cumming, GA",
-    isHighlighted: false
   }
 ];
 
@@ -123,6 +52,9 @@ export default function Experience() {
                   <span className="location">{exp.location}</span>
                 </div>
               </div>
+              {exp.description && (
+                <p className="experience-description">{exp.description}</p>
+              )}
             </div>
           ))}
         </div>
