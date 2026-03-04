@@ -1,73 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg:         #F5F0E8;
+  --bg-card:    #EDE8DF;
+  --text:       #1A1714;
+  --text-muted: #7A7068;
+  --accent:     #3D2E1E;
+  --line:       #D5CEBC;
+  --hover:      #C8BFA8;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:   'DM Sans', system-ui, sans-serif;
+  --font-mono:   'JetBrains Mono', monospace;
+}
+
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: 0;
-    background-color: inherit;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  * {
-    max-width: 100%;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  img, svg, video, iframe {
-    max-width: 100%;
-    height: auto;
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
-  
-  html {
-    scroll-behavior: smooth;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1.2;
-    color: var(--clr-fg);
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+}
+
+.section-animate {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 0 1rem 3rem;
   }
-  
-  h1 {
-    font-size: 4rem;
+  .section {
+    padding: 2rem 0;
   }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
-  
-  h4 {
-    font-size: 1.3rem;
-  }
-  
-  ul {
-    list-style-type: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--clr-fg);
-    font-family: var(--font-mono);
-  }
-  
-  button {
-    cursor: pointer;
-    font-family: var(--font-mono);
-  }
-  
-  @media (max-width: 900px) {
-    h1 {
-      font-size: 2.6rem;
-    }
-  }
+}
