@@ -1,17 +1,35 @@
-const PROJECTS = [
+import GitHubProjects from './GitHubProjects'
+
+const FEATURED = [
   {
-    title: 'Drug Interaction Checker (Proof of Concept)',
-    description: 'Built a Swift-based healthcare tool integrating NIH drug interaction APIs with RESTful services and JSON parsing. Supported 10,000+ drug combinations with real-time feedback and async validation logic.',
-    tags: ['Swift', 'REST APIs', 'iOS', 'Healthcare'],
-    link: null,
-    live: null,
+    title: 'Diatrend',
+    date: 'Dec 2024 – May 2025',
+    description: 'AI-driven CGM trajectory prediction using PyTorch; temporal/clinical features; models like TabTransformer/GNN/attention MLP; FastAPI inference + Streamlit dashboard.',
+    repo: 'https://github.com/iamrishabruh/Diatrend-ML',
   },
   {
-    title: 'AI Chatbot Platform — Reachmind',
-    description: 'Developed modular, highly personalized AI chatbot solutions for small businesses with custom consulting layers. Designed for seamless client interaction and easy white-labeling.',
-    tags: ['AI', 'NLP', 'Full-Stack', 'Startups'],
-    link: null,
-    live: null,
+    title: 'Nexus Lite',
+    date: 'Dec 2024 – May 2025',
+    description: 'Cross-platform mobile health tracker (React Native Expo + FastAPI); auth + structured health storage; secure endpoints; modular + tested.',
+    repo: 'https://github.com/iamrishabruh/Nexus-Lite',
+  },
+  {
+    title: 'Bennington',
+    date: 'Dec 2024 – May 2025',
+    description: 'Stock backtesting + ML trading platform in Python; Streamlit; Docker; deployed to Google Cloud Run; env-based config + key management.',
+    repo: 'https://github.com/iamrishabruh/Bennington',
+  },
+  {
+    title: 'Differential Learning',
+    date: 'Aug 2024 – Dec 2025',
+    description: 'Federated learning simulation with differential privacy (per-example clipping, DPAdam), gradient clustering aggregation, accuracy–privacy tradeoffs, Streamlit interface.',
+    repo: 'https://github.com/iamrishabruh/Differential-Learning',
+  },
+  {
+    title: 'Drug Interaction Checker',
+    date: 'Jun 2023 – Sep 2023',
+    description: 'Swift/SwiftUI POC integrating clinical APIs; robust error handling; XCTest; CI workflows; modular architecture.',
+    repo: 'https://github.com/iamrishabruh/Drug-Interaction-Checker',
   },
 ]
 
@@ -19,30 +37,36 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <h2 className="section-title section-animate" style={{ animationDelay: '0.1s' }}>Projects</h2>
+
+      <h3 className="projects-subtitle section-animate" style={{ animationDelay: '0.12s' }}>Featured</h3>
       <div className="projects-grid">
-        {PROJECTS.map((project, i) => (
-          <article key={i} className="project-card section-animate" style={{ animationDelay: `${0.15 + i * 0.08}s` }}>
-            <h3 className="project-card__title">{project.title}</h3>
+        {FEATURED.map((project, i) => (
+          <article key={project.title} className="project-card section-animate" style={{ animationDelay: `${0.15 + i * 0.05}s` }}>
+            <h4 className="project-card__title">{project.title}</h4>
+            <p className="project-card__date">{project.date}</p>
             <p className="project-card__desc">{project.description}</p>
-            <div className="project-card__tags">
-              {project.tags.map((tag) => (
-                <span key={tag} className="project-card__tag">{tag}</span>
-              ))}
-            </div>
-            {(project.link || project.live) && (
-              <div className="project-card__links">
-                {project.link && <a href={project.link}>GitHub</a>}
-                {project.live && <a href={project.live}>Live</a>}
-              </div>
-            )}
+            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="project-card__link">GitHub →</a>
           </article>
         ))}
       </div>
+
+      <h3 className="projects-subtitle section-animate" style={{ animationDelay: '0.45s' }}>All repositories</h3>
+      <GitHubProjects />
+
       <style>{`
+        .projects-subtitle {
+          font-family: var(--font-mono);
+          font-size: 0.875rem;
+          color: var(--text-muted);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin: 1.5rem 0 1rem;
+        }
+        .projects-subtitle:first-of-type { margin-top: 0; }
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
+          gap: 1.25rem;
         }
         .project-card {
           background: var(--bg-card);
@@ -51,42 +75,31 @@ export default function Projects() {
           padding: 1.5rem;
           transition: all 0.2s ease;
         }
-        .project-card:hover {
-          border-color: var(--hover);
-        }
+        .project-card:hover { border-color: var(--hover); }
         .project-card__title {
           font-family: var(--font-display);
           font-size: 1.125rem;
           font-weight: 600;
           color: var(--text);
+          margin-bottom: 0.25rem;
+        }
+        .project-card__date {
+          font-family: var(--font-mono);
+          font-size: 0.75rem;
+          color: var(--text-muted);
           margin-bottom: 0.5rem;
         }
         .project-card__desc {
           font-size: 0.9375rem;
           line-height: 1.6;
           color: var(--text);
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
         }
-        .project-card__tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-        }
-        .project-card__tag {
-          font-family: var(--font-mono);
-          font-size: 0.75rem;
-          padding: 0.25rem 0.5rem;
-          background: var(--bg);
-          color: var(--accent);
-          border-radius: 4px;
-        }
-        .project-card__links {
-          margin-top: 0.75rem;
+        .project-card__link {
           font-size: 0.875rem;
+          color: var(--accent);
         }
-        .project-card__links a {
-          margin-right: 1rem;
-        }
+        .project-card__link:hover { color: var(--hover); }
         @media (max-width: 768px) {
           .projects-grid { grid-template-columns: 1fr; }
         }

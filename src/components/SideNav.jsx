@@ -5,7 +5,10 @@ const SECTIONS = [
   { id: 'about', label: 'A' },
   { id: 'experience', label: 'E' },
   { id: 'projects', label: 'P' },
-  { id: 'education', label: 'Ed' },
+  { id: 'research', label: 'R' },
+  { id: 'volunteering', label: 'V' },
+  { id: 'resume', label: 'Res' },
+  { id: 'documents', label: 'D' },
   { id: 'honors', label: 'O' },
   { id: 'skills', label: 'S' },
   { id: 'contact', label: 'C' },
@@ -63,13 +66,14 @@ export default function SideNav() {
         }
         .sidenav__btn {
           width: 32px;
+          min-width: 32px;
           height: 32px;
           border-radius: 50%;
           border: 1px solid var(--line);
           background: var(--bg);
           color: var(--text-muted);
           font-family: var(--font-mono);
-          font-size: 0.75rem;
+          font-size: 0.65rem;
           font-weight: 500;
           display: flex;
           align-items: center;

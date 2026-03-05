@@ -3,7 +3,7 @@ export default function About() {
     <section id="about" className="section">
       <h2 className="section-title section-animate" style={{ animationDelay: '0.1s' }}>About</h2>
       <p className="about__text section-animate" style={{ animationDelay: '0.2s' }}>
-        I'm a computer science student at Georgia State University with a deep curiosity for building things that work elegantly. I founded Reachmind to bring personalized AI chatbot solutions to small businesses. I've interned at Kaiser Permanente on their mobile flagship app, built software for a VC-backed dermatology startup, and contributed to reinforcement learning from human feedback (RLHF) projects. Outside of code, I'm a proud Mensa member and an active contributor to my community through health outreach, NAACP partnerships, and events along the Atlanta Beltline.
+        I'm currently at Georgia Tech for my M.S. in Computer Science. I'm part of the CBA Lab under Thomas Plötz, doing research at the intersection of health, AI, and ML. I graduated from Georgia State University with a B.S. in Computer Science and founded Reachmind to bring personalized AI solutions to small businesses. I've built automation and data pipelines at Care Access, shipped production software at Skincentric and Kaiser Permanente, and contributed to RLHF and healthcare tools. Outside of code, I'm a Mensa member and stay involved in community outreach. Based in Atlanta, GA; US Citizen.
       </p>
       <style>{`
         .about__text {

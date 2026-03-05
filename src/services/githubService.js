@@ -20,8 +20,9 @@ const fetchGitHubRepos = async (username) => {
     };
 
     // Add authorization if token is available
-    if (process.env.REACT_APP_GITHUB_TOKEN) {
-      headers.Authorization = `token ${process.env.REACT_APP_GITHUB_TOKEN}`;
+    const token = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_GITHUB_TOKEN) || (typeof process !== 'undefined' && process.env?.REACT_APP_GITHUB_TOKEN);
+    if (token) {
+      headers.Authorization = `token ${token}`;
     } else {
       console.warn('No GitHub token found. Using unauthenticated requests with lower rate limits.');
     }
@@ -40,9 +41,10 @@ const fetchGitHubRepos = async (username) => {
     // Fetch languages for each repository
     const reposWithLanguages = await Promise.all(
       repos.map(async (repo) => {
+        const token = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_GITHUB_TOKEN) || (typeof process !== 'undefined' && process.env?.REACT_APP_GITHUB_TOKEN);
         const languagesResponse = await fetch(`${GITHUB_API_URL}/repos/${username}/${repo.name}/languages`, {
           headers: {
-            'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+            ...(token && { Authorization: `token ${token}` }),
             'Accept': 'application/vnd.github.v3+json',
           },
         });

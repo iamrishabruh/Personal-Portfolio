@@ -2,15 +2,27 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact">
       <h2 className="section-title section-animate" style={{ animationDelay: '0.1s' }}>Contact</h2>
-      <p className="contact__email section-animate" style={{ animationDelay: '0.2s' }}>
-        <a href="mailto:rishabruh@gmail.com">rishabruh@gmail.com</a>
+      <p className="contact__location section-animate" style={{ animationDelay: '0.15s' }}>
+        Atlanta, GA · US Citizen
+      </p>
+      <p className="contact__emails section-animate" style={{ animationDelay: '0.2s' }}>
+        <a href="mailto:rchouhan.network@gmail.com">rchouhan.network@gmail.com</a>
+        {' · '}
+        <a href="mailto:rchouhan8@gatech.edu">rchouhan8@gatech.edu</a>
+        {' · '}
+        <a href="mailto:rishabh@reachmindllc.com">rishabh@reachmindllc.com</a>
+        {' · '}
+        <a href="mailto:rishabh@76x.io">rishabh@76x.io</a>
       </p>
       <div className="contact__buttons section-animate" style={{ animationDelay: '0.25s' }}>
-        <a href="https://linkedin.com/in/rishabhchouhan" target="_blank" rel="noopener noreferrer" className="contact__btn">
-          LinkedIn
-        </a>
-        <a href="https://github.com/rishabhchouhan" target="_blank" rel="noopener noreferrer" className="contact__btn">
+        <a href="https://github.com/iamrishabruh" target="_blank" rel="noopener noreferrer" className="contact__btn">
           GitHub
+        </a>
+        <a href="https://reachmindllc.com" target="_blank" rel="noopener noreferrer" className="contact__btn">
+          Reachmind
+        </a>
+        <a href="#resume" className="contact__btn">
+          Resume
         </a>
       </div>
       <p className="contact__line section-animate" style={{ animationDelay: '0.3s' }}>
@@ -18,16 +30,21 @@ export default function Contact() {
       </p>
       <style>{`
         .contact { padding-bottom: 4rem; }
-        .contact__email {
-          font-size: 1.125rem;
+        .contact__location {
+          font-family: var(--font-mono);
+          font-size: 0.875rem;
+          color: var(--text-muted);
+          margin-bottom: 0.5rem;
+        }
+        .contact__emails {
+          font-size: 1rem;
           margin-bottom: 1rem;
         }
-        .contact__email a {
+        .contact__emails a {
           color: var(--accent);
-          font-weight: 500;
           transition: color 0.2s ease;
         }
-        .contact__email a:hover { color: var(--hover); }
+        .contact__emails a:hover { color: var(--hover); }
         .contact__buttons {
           display: flex;
           gap: 1rem;

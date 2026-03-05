@@ -1,13 +1,18 @@
 const ENTRIES = [
   {
-    school: 'Georgia State University',
-    degree: 'B.S. Computer Science',
-    note: 'Expected Graduation: 2026',
+    school: 'Georgia Institute of Technology',
+    degree: 'M.S. Computer Science',
+    note: 'Aug 2025 – Present · 4.0/4.0 GPA',
   },
   {
-    school: 'South Forsyth High School',
-    degree: null,
-    note: 'FBLA Business Achievement Awards — 4-tier leadership program (Contributor → Leader → Advocate)',
+    school: 'Georgia State University',
+    degree: 'B.S. Computer Science',
+    note: 'Aug 2023 – May 2025',
+  },
+  {
+    school: 'University of Georgia',
+    degree: 'Undergraduate coursework',
+    note: 'Aug 2022 – May 2023',
   },
 ]
 
