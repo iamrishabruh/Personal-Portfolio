@@ -1,6 +1,13 @@
-import GitHubProjects from './GitHubProjects'
+﻿import GitHubProjects from './GitHubProjects'
 
 const FEATURED = [
+  {
+    title: '76x — Language Learning',
+    date: 'Current',
+    description: 'I’m building. Language learning reimagined. Your voice becomes a personalized learning experience: real-time transcription, vocabulary extraction, and custom study plans. Spaced-repetition flashcards, fill-in-the-blank challenges, daily goals, and leaderboards. iOS (Swift/SwiftUI); free on the App Store.',
+    repo: null,
+    appStore: 'https://apps.apple.com/us/app/76x-language-learning/id6758322423',
+  },
   {
     title: 'Diatrend',
     date: 'Dec 2024 – May 2025',
@@ -45,7 +52,14 @@ export default function Projects() {
             <h4 className="project-card__title">{project.title}</h4>
             <p className="project-card__date">{project.date}</p>
             <p className="project-card__desc">{project.description}</p>
-            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="project-card__link">GitHub →</a>
+            <div className="project-card__links">
+              {project.repo && (
+                <a href={project.repo} target="_blank" rel="noopener noreferrer" className="project-card__link">GitHub →</a>
+              )}
+              {project.appStore && (
+                <a href={project.appStore} target="_blank" rel="noopener noreferrer" className="project-card__link">App Store →</a>
+              )}
+            </div>
           </article>
         ))}
       </div>
@@ -95,6 +109,7 @@ export default function Projects() {
           color: var(--text);
           margin-bottom: 0.75rem;
         }
+        .project-card__links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
         .project-card__link {
           font-size: 0.875rem;
           color: var(--accent);

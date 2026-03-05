@@ -12,8 +12,20 @@ const ITEMS = [
     bullets: [
       '500+ service hours; national recognition.',
       '1st in State — Computer Problem Solving (2021); 2nd in State — Computer Applications (2021); 2nd in State — Desktop Publishing (2019); 4th in State — Keyboarding Applications II (2019).',
-      'Founder, Finance & Investment Club (2019 – 2022).',
-      'Founder, AI FinTech Club (2024 – 2025).',
+    ],
+  },
+  {
+    org: 'Finance & Investment Club',
+    role: 'Founder (2019 – 2022)',
+    bullets: [
+      'Founded and led the club; connected students to real-world finance and investment experiences.',
+    ],
+  },
+  {
+    org: 'AI FinTech Club',
+    role: 'Founder (2024 – 2025)',
+    bullets: [
+      'Founded and led the club at the intersection of AI and financial technology.',
     ],
   },
 ]

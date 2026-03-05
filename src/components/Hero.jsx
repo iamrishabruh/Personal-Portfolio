@@ -3,15 +3,15 @@ export default function Hero() {
     <section id="hero" className="hero">
       <div className="hero__highlights section-animate" style={{ animationDelay: '0.05s' }}>
         <span>Georgia Tech MSCS (4.0 GPA)</span>
-        <span>AI/Automation @ Care Access</span>
+        <span>Full-time @ Care Access · AI & automation</span>
         <span>Healthcare ML + Platforms</span>
         <span>CBA Lab Research</span>
       </div>
       <div className="hero__inner section-animate" style={{ animationDelay: '0.1s' }}>
         <h1 className="hero__name">Rishabh Chouhan</h1>
-        <p className="hero__title">Software Engineer · Builder · Mensa Member</p>
+        <p className="hero__title">Software Engineer · Builder · Entrepreneur</p>
         <p className="hero__bio">
-          I'm a master's student in Computer Science at Georgia Tech and CEO of Reachmind. I build software that matters — from AI and automation to healthcare tools and full-stack products.
+          I'm a master's student in Computer Science at Georgia Tech and CEO of Reachmind. I work full time at Care Access building automation systems and data pipelines. I build software that matters — from AI and automation to healthcare tools and full-stack products.
         </p>
         <div className="hero__contact">
           <a href="mailto:rchouhan.network@gmail.com">rchouhan.network@gmail.com</a>
