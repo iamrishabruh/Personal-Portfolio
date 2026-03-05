@@ -41,6 +41,14 @@ const ENTRIES = [
   },
 ]
 
+const OTHER_JOBS = [
+  { role: 'Barista', company: 'Starbucks' },
+  { role: 'Grill cook', company: "Freddy's" },
+  { role: 'Server + delivery', company: 'Mangia' },
+  { role: 'Deli manager', company: 'Walmart' },
+  { role: 'Tutor', company: 'Kumon' },
+]
+
 export default function Experience() {
   return (
     <section id="experience" className="section">
@@ -73,6 +81,14 @@ export default function Experience() {
             </div>
           </article>
         ))}
+      </div>
+      <div className="other-experience section-animate" style={{ animationDelay: '0.5s' }}>
+        <h3 className="other-experience__title">Other experience</h3>
+        <ul className="other-experience__list">
+          {OTHER_JOBS.map((job, i) => (
+            <li key={i}><span className="other-experience__role">{job.role}</span>, {job.company}</li>
+          ))}
+        </ul>
       </div>
       <style>{`
         .timeline { position: relative; }
@@ -133,6 +149,22 @@ export default function Experience() {
           left: 0;
           color: var(--line);
         }
+        .other-experience { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+        .other-experience__title {
+          font-family: var(--font-mono);
+          font-size: 0.8125rem;
+          color: var(--text-muted);
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-bottom: 0.75rem;
+        }
+        .other-experience__list {
+          list-style: none;
+          font-size: 0.9375rem;
+          color: var(--text-muted);
+          line-height: 1.8;
+        }
+        .other-experience__role { color: var(--text); font-weight: 500; }
       `}</style>
     </section>
   )
