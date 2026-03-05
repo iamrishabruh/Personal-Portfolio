@@ -62,7 +62,9 @@ export default function Skills() {
           border: 1px solid var(--line);
         }
         @media (max-width: 768px) {
-          .skills-grid { grid-template-columns: 1fr; }
+          .skills-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+          .skills-group__tags { gap: 0.4rem; }
+          .skills-group__tag { padding: 0.4rem 0.65rem; }
         }
       `}</style>
     </section>

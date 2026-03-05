@@ -92,6 +92,20 @@ export default function Documents() {
         .doc-list__link:hover { color: var(--hover); }
         .doc-list__label { color: var(--text); }
         .doc-list__dl { color: var(--text-muted); font-size: 0.85em; }
+        @media (max-width: 768px) {
+          .documents-section { padding-bottom: 2.5rem; }
+          .documents__intro { margin-bottom: 1.25rem; }
+          .doc-block { margin-bottom: 1.5rem; }
+          .doc-list__item {
+            padding: 0.5rem 0;
+          }
+          .doc-list__link {
+            display: inline-block;
+            padding: 0.4rem 0.25rem 0.4rem 0;
+            min-height: 44px;
+            line-height: 1.5;
+          }
+        }
       `}</style>
     </section>
   )

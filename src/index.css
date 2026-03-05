@@ -92,11 +92,26 @@ button {
   letter-spacing: 0.02em;
 }
 
+/* Mobile: spacing + safe area for notched phones */
 @media (max-width: 768px) {
   .page {
-    padding: 0 1rem 3rem;
+    padding: 0 max(1.25rem, env(safe-area-inset-left)) max(3rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-right));
   }
   .section {
-    padding: 2rem 0;
+    padding: 2.25rem 0;
+  }
+  .section-title {
+    margin-bottom: 1.25rem;
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  .section {
+    padding: 1.75rem 0;
   }
 }

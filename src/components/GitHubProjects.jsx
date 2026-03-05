@@ -151,7 +151,14 @@ export default function GitHubProjects() {
         }
         .github-project-card__stats span { margin-right: 0.75rem; }
         @media (max-width: 768px) {
-          .github-projects__grid { grid-template-columns: 1fr; }
+          .github-projects__grid { grid-template-columns: 1fr; gap: 0.875rem; }
+          .github-project-card { padding: 1.125rem; }
+          .github-project-card__link {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0.35rem 0.25rem 0.35rem 0;
+          }
         }
       `}</style>
     </div>

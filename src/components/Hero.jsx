@@ -90,6 +90,32 @@ export default function Hero() {
           background: linear-gradient(to bottom, var(--line), transparent);
           border-radius: 1px;
         }
+        @media (max-width: 768px) {
+          .hero { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+          .hero__highlights { gap: 0.4rem 0.75rem; margin-bottom: 1.25rem; font-size: 0.7rem; }
+          .hero__name { margin-bottom: 0.35rem; }
+          .hero__title { margin-bottom: 1rem; }
+          .hero__bio { font-size: 1rem; margin-bottom: 1.25rem; }
+          .hero__contact {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.25rem 0;
+          }
+          .hero__contact a {
+            padding: 0.5rem 0.25rem 0.5rem 0;
+            margin-right: 0.25rem;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+          }
+          .hero__dot { margin: 0 0.35rem; }
+          .hero__scroll { margin-top: 2rem; }
+        }
+        @media (max-width: 480px) {
+          .hero { padding-top: 2rem; padding-bottom: 2rem; }
+          .hero__contact a { padding: 0.5rem 0.5rem 0.5rem 0; }
+        }
       `}</style>
     </section>
   )

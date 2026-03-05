@@ -165,6 +165,20 @@ export default function Experience() {
           line-height: 1.8;
         }
         .other-experience__role { color: var(--text); font-weight: 500; }
+        @media (max-width: 768px) {
+          .timeline__entry {
+            padding-left: 1.25rem;
+            margin-bottom: 1.75rem;
+          }
+          .timeline__header { flex-wrap: wrap; gap: 0.35rem; }
+          .timeline__date { white-space: normal; }
+          .timeline__role { font-size: 1.125rem; }
+          .timeline__bullets li { margin-bottom: 0.5rem; }
+          .other-experience { margin-top: 2rem; padding-top: 1.25rem; }
+        }
+        @media (max-width: 480px) {
+          .timeline__entry { padding-left: 1rem; margin-bottom: 1.5rem; }
+        }
       `}</style>
     </section>
   )

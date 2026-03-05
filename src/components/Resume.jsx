@@ -54,6 +54,22 @@ export default function Resume() {
           font-size: 0.875rem;
           color: var(--text-muted);
         }
+        @media (max-width: 768px) {
+          .resume-section { padding-bottom: 2.5rem; }
+          .resume__actions { flex-direction: column; gap: 0.75rem; }
+          .resume__btn {
+            min-height: 48px;
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 280px;
+          }
+        }
+        @media (max-width: 480px) {
+          .resume__btn { max-width: none; }
+        }
       `}</style>
     </section>
   )

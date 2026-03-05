@@ -1,4 +1,4 @@
-﻿import GitHubProjects from './GitHubProjects'
+import GitHubProjects from './GitHubProjects'
 
 const FEATURED = [
   {
@@ -116,7 +116,20 @@ export default function Projects() {
         }
         .project-card__link:hover { color: var(--hover); }
         @media (max-width: 768px) {
-          .projects-grid { grid-template-columns: 1fr; }
+          .projects-grid { grid-template-columns: 1fr; gap: 1rem; }
+          .project-card { padding: 1.25rem; }
+          .project-card__desc { margin-bottom: 1rem; }
+          .project-card__links { gap: 0.5rem; }
+          .project-card__link {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0.35rem 0.25rem 0.35rem 0;
+          }
+        }
+        @media (max-width: 480px) {
+          .project-card { padding: 1rem; }
+          .projects-subtitle { margin: 1.25rem 0 0.75rem; }
         }
       `}</style>
     </section>

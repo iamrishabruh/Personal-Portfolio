@@ -16,6 +16,10 @@ export default function About() {
           max-width: 65ch;
         }
         .about__interests { margin-top: 1rem; color: var(--text-muted); }
+        @media (max-width: 768px) {
+          .about__text { font-size: 0.9375rem; line-height: 1.75; }
+          .about__interests { margin-top: 1.25rem; }
+        }
       `}</style>
     </section>
   )

@@ -70,6 +70,37 @@ export default function Contact() {
           color: var(--text-muted);
           font-style: italic;
         }
+        @media (max-width: 768px) {
+          .contact { padding-bottom: 3rem; }
+          .contact__location { margin-bottom: 0.75rem; }
+          .contact__emails {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+          }
+          .contact__emails a {
+            display: inline-block;
+            padding: 0.35rem 0.25rem 0.35rem 0;
+            min-height: 44px;
+            line-height: 1.4;
+          }
+          .contact__buttons {
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+          }
+          .contact__btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0.75rem 1.25rem;
+            width: 100%;
+            max-width: 280px;
+          }
+        }
+        @media (max-width: 480px) {
+          .contact__btn { max-width: none; }
+        }
       `}</style>
     </section>
   )
