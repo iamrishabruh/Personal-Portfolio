@@ -2,13 +2,6 @@ import GitHubProjects from './GitHubProjects'
 
 const FEATURED = [
   {
-    title: '76x — Language Learning',
-    date: 'Current',
-    description: 'I’m building. Language learning reimagined. Your voice becomes a personalized learning experience: real-time transcription, vocabulary extraction, and custom study plans. Spaced-repetition flashcards, fill-in-the-blank challenges, daily goals, and leaderboards. iOS (Swift/SwiftUI); free on the App Store.',
-    repo: null,
-    appStore: 'https://apps.apple.com/us/app/76x-language-learning/id6758322423',
-  },
-  {
     title: 'Diatrend',
     date: 'Dec 2024 – May 2025',
     description: 'AI-driven CGM trajectory prediction using PyTorch; temporal/clinical features; models like TabTransformer/GNN/attention MLP; FastAPI inference + Streamlit dashboard.',

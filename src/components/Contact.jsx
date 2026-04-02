@@ -11,8 +11,6 @@ export default function Contact() {
         <a href="mailto:rchouhan8@gatech.edu">rchouhan8@gatech.edu</a>
         {' · '}
         <a href="mailto:rishabh@reachmindllc.com">rishabh@reachmindllc.com</a>
-        {' · '}
-        <a href="mailto:rishabh@76x.io">rishabh@76x.io</a>
       </p>
       <div className="contact__buttons section-animate" style={{ animationDelay: '0.25s' }}>
         <a href="https://github.com/iamrishabruh" target="_blank" rel="noopener noreferrer" className="contact__btn">
