@@ -2,6 +2,18 @@ export default function Hero() {
   return (
     <section id="hero" className="hero" aria-label="Introduction">
       <div className="hero__cosmic">
+        <img
+          className="hero__cosmic-img"
+          src="/images/cosmic-cliffs-2k.png"
+          srcSet="/images/cosmic-cliffs-1200.png 1200w, /images/cosmic-cliffs-2k.png 2000w"
+          sizes="100vw"
+          width={2000}
+          height={1158}
+          alt="Cosmic Cliffs in the Carina Nebula — infrared view from JWST NIRCam"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div className="hero__cosmic-gradient" aria-hidden="true" />
         <div className="hero__cosmic-overlay" aria-hidden="true" />
         <div className="hero__cosmic-inner">
           <h1 className="hero__name">Rishabh Chouhan</h1>
@@ -48,25 +60,41 @@ export default function Hero() {
           margin-right: -50vw;
           width: 100vw;
           min-height: min(52vh, 520px);
-          background:
-            linear-gradient(
-              180deg,
-              rgba(10, 12, 20, 0.25) 0%,
-              rgba(26, 23, 20, 0.75) 55%,
-              var(--bg) 100%
-            ),
-            url('/images/cosmic-cliffs.png') center 42% / cover no-repeat;
+          overflow: hidden;
           display: flex;
           align-items: flex-end;
           padding: 2.5rem 1.5rem 3.5rem;
+        }
+        .hero__cosmic-img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 42%;
+          transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          image-rendering: auto;
+        }
+        .hero__cosmic-gradient {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(10, 12, 20, 0.2) 0%,
+            rgba(26, 23, 20, 0.55) 45%,
+            var(--bg) 100%
+          );
+          pointer-events: none;
         }
         .hero__cosmic-overlay {
           position: absolute;
           inset: 0;
           background: linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.15) 0%,
-            rgba(0, 0, 0, 0.35) 100%
+            rgba(0, 0, 0, 0.12) 0%,
+            rgba(0, 0, 0, 0.28) 100%
           );
           pointer-events: none;
         }
@@ -154,8 +182,8 @@ export default function Hero() {
           .hero__cosmic {
             min-height: min(44vh, 380px);
             padding: 2rem 1rem 2.75rem;
-            background-position: center 38%;
           }
+          .hero__cosmic-img { object-position: center 38%; }
           .hero__body { padding-top: 1.25rem; padding-bottom: 2.5rem; }
           .hero__highlights { gap: 0.4rem 0.75rem; margin-bottom: 1.25rem; font-size: 0.7rem; }
           .hero__bio { font-size: 1rem; margin-bottom: 1.25rem; }
