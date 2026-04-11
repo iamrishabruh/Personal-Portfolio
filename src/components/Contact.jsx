@@ -16,6 +16,9 @@ export default function Contact() {
         <a href="https://github.com/iamrishabruh" target="_blank" rel="noopener noreferrer" className="contact__btn">
           GitHub
         </a>
+        <a href="https://www.linkedin.com/in/chouhan-rishabh/" target="_blank" rel="noopener noreferrer" className="contact__btn">
+          LinkedIn
+        </a>
         <a href="https://reachmindllc.com" target="_blank" rel="noopener noreferrer" className="contact__btn">
           Reachmind
         </a>

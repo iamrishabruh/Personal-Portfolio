@@ -39,6 +39,8 @@ export default function Hero() {
             <span className="hero__dot">·</span>
             <a href="https://github.com/iamrishabruh" target="_blank" rel="noopener noreferrer">GitHub</a>
             <span className="hero__dot">·</span>
+            <a href="https://www.linkedin.com/in/chouhan-rishabh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span className="hero__dot">·</span>
             <a href="https://reachmindllc.com" target="_blank" rel="noopener noreferrer">Reachmind</a>
             <span className="hero__dot">·</span>
             <a href="#resume">Resume</a>
