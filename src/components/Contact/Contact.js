@@ -28,3 +28,12 @@ const Contact = () => {
 }
 
 export default Contact
+
+
+return { Contact
+
+    < section className = 'section contact center' id = 'contact'
+
+
+
+}
